@@ -1,0 +1,18 @@
+body
+{
+background-color: rgba(112, 99, 99, 0.013);
+}
+#kas
+{
+    height: 400px;
+    width: 500px;
+    margin: 2px;
+    padding: 2px;
+}
+#lion
+{
+    height: 400px;
+    width: 600px;
+    margin: 2px;
+    padding: 2px;
+}
