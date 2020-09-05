@@ -43,3 +43,7 @@ background-color: rgba(112, 99, 99, 0.013);
   li a:hover {
     background-color: #111;
   }
+  footer
+  {
+    background-color: blueviolet ;
+  }

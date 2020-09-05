@@ -1,36 +1,33 @@
-// const words = ["Cat", "Ball", "Apple", "Dog"];
-// console.log(words);
-// const reversed_words = words.reverse();
-// console.log(reversed_words);
-// const phrase = words.join("");
-// console.log(phrase);
-// const sorted_words = words.sort();
-// console.log(sorted_words);
-
-
-// let x=["apple","ball","cool"]
-// let xg=[1,-2,3,-5]
-
-// console.log(xg.map(arr=>arr>0))
-// console.log(xg.filter(arr=>arr>0))
-
-// for(let i=0;i<x.length;i++)
-// {
-//     console.log(x[i].length);
-// }
-
-const arr1 = [1,2,3,4];
-for(let n of arr1){
-console.log(n*3);
+function sum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
-
-console.log([1,2,3].reduce(n,sum) =>sum=sum+n)
-const myStr = "Hello world";
-for(let s of myStr){
-console.log(s);
+ 
+function checkArray(arr) {
+    if (arr.length === 0) {
+        return false;
+    }
+    let arraySum = sum(arr);
+    console.log(arraySum);
+    //its not looping 
+    for (let i = 0; i < arr.length; i++) {
+ 
+        console.log(arr[i]);
+        if (arraySum==arr[i]) {
+            return false
+        }
+        
+    }
+    return true;
 }
+console.log(checkArray([]));
+console.log(checkArray([5, -5, 0]));
+console.log(checkArray([5, -2, 1]));
 
-const arr1 = [1,2,3,4];
-arr1.forEach(function(element){
-console.log(element);
-});
+function hello()
+{
+    alert("hello connected")
+}

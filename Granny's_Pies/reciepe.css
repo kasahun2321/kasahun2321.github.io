@@ -1,0 +1,38 @@
+h1
+{
+    color:#A4A400;
+    background-color: #f0f0f0;
+    font-family: lucida sans,helvetica,arial,sans-serif;
+  
+    text-decoration: underline;
+    font-size: 22pt ;
+    font-weight:bold;
+
+}
+#main
+{
+    text-align: center;
+}
+
+body{
+    background-image: "images/background.gif";
+    width: 1024px;
+    height: 768px;
+    background-color: white;
+
+}
+body.p{
+    background-color: #404040;
+    font-family: georgia,garamond,sans-serif;
+
+}
+a
+{
+    color: #A4A400;
+
+}
+
+blockquote
+{
+    background-color:yellow;
+}

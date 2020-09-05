@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  function getage()
+  {
+      let age =parseInt(document.getElementById("birthday").value);
+      let now =new Date()
+      let current=now.getFullYear()
+      let exact_age=current-age;
+      document.getElementById("age").innerHTML=exact_age;
+
+
+  }
+        
+    </script>
+
+</head>
+<body>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br>
+    <button onclick="getage()">find age </button>
+    <span style="color:blue;font-weight:bold" id="age">blue</span>
+
+</body>
+</html>
