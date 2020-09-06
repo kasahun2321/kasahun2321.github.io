@@ -17,8 +17,8 @@ h1
 body{
     
     background-image: url("images/background.gif");
-    width: 1024px;
-    height: 768px;
+    /* width: 1024px;
+    height: 768px; */
     background-color: white;
    
 
@@ -46,4 +46,17 @@ blockquote
     list-style: circle;
     text-align: left;   
     margin-bottom:0;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
 }
