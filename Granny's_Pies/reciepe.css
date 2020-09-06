@@ -15,10 +15,12 @@ h1
 }
 
 body{
-    background-image: "images/background.gif";
+    
+    background-image: url("images/background.gif");
     width: 1024px;
     height: 768px;
     background-color: white;
+   
 
 }
 body.p{
@@ -34,7 +36,8 @@ a
 
 blockquote
 {
-    background-color:yellow;
+    background-color:#F2F26E
+    ;
 }
 .classic  {
     width:249px;
