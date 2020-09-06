@@ -36,3 +36,11 @@ blockquote
 {
     background-color:yellow;
 }
+.classic  {
+    width:249px;
+    margin-left:10px;
+    margin-top: 0px; 
+    list-style: circle;
+    text-align: left;   
+    margin-bottom:0;
+}
