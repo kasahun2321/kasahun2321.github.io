@@ -1,0 +1,11 @@
+h1,h2
+{
+    text-align: center;
+    color: rgb(20, 27, 27);
+}
+#h1div
+{
+    height: 200;
+    width: auto;
+    background-color: aqua;
+}
