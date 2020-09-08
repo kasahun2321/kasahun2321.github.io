@@ -1,3 +1,6 @@
+
+"use strict"
+
 //maximium of three number
 
 // defining table for max find
@@ -68,11 +71,11 @@ for (let i=0; i<arr.length;i++)
 return mult;
  }
 
- let arr=[1,2,3,4];
- let summation = sum(arr);
- let mult =multiply(arr);
- console.log("the sum of given array"+summation);
- console.log("the product of given array"+mult);
+ let arr2=[1,2,3,4];
+ let summation = sum(arr2);
+ let mult =multiply(arr2);
+ console.log("the sum of given array:"+summation);
+ console.log("the product of given array:"+mult);
 
 ////   Q3  
 /*
@@ -106,9 +109,9 @@ for(let i=1;i<arr.length;i++)
 return lent_array;
 }
 
-let arr=["hello","lo","kaa","kasahun"];
+let arr3=["hello","lo","kaa","kasahun"];
 
-console.log("the longest lenght of the array:"+findLongestWord(arr));
+console.log("the longest lenght of the array:"+findLongestWord(arr3));
 
 
 //// Q4    
@@ -125,6 +128,6 @@ function  reverse_array(arr)
     return temp
 }
 
-let arr=["x","s","w"];
+let arr4=["x","s","w"];
 
-console.log(reverse_array(arr));
+console.log(reverse_array(arr4));
