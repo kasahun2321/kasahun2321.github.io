@@ -1,0 +1,23 @@
+{
+    "env": {"browser": true, "es6": true, "mocha": true},
+    "extends": "eslint:recommended",
+    "parserOptions": {"sourceType": "script"},
+    "rules": {
+        "strict": ["error", "global"],
+        "semi": ["warn", "always"],
+        "quotes": ["error", "double"],
+        "no-alert": "off",
+        "no-console": "off",
+		"no-debugger": "off",
+        "no-unused-vars": "warn",
+		"id-length": [2, {"min": 3, "max": 20, "exceptions": ["i","j"]}],
+        "camelcase": [2, {"properties": "always"}],
+         "valid-jsdoc": ["error"], 
+         "require-jsdoc": ["error", {
+            "require": { "FunctionDeclaration": true, 
+               "MethodDefinition": true, 
+               "ClassDeclaration": true, 
+               "ArrowFunctionExpression": false, 
+               "FunctionExpression": true} }]
+    } 
+}

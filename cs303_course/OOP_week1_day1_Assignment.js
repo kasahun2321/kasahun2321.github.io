@@ -50,7 +50,7 @@ console.log("the maximum of three number is:"+maxOfThree(4,5,6));
 ||                                ||||  return it to call      +++                      +
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++      
 */
-
+debugger;
 
 function sum(arr)
 {
