@@ -1,12 +1,6 @@
 
 function hellofeloow()
 {
-    
+    console.log("hello")
 }
 
-hello(hello);
-/**
- * 
- * 
- * 
- */
