@@ -72,3 +72,42 @@ function isVowel(n)
 }
 let x='f';
 console.log(isVowel(x));
+
+/**
+ * 
+ * @param {arr =kasahun} arr =nuhasak
+ */
+
+
+function  reverse_array(arr)
+{
+    let temp=[];
+    for (let i=0;i<arr.length;i++)
+    {
+        temp[i]=arr[arr.length-1-i]
+    }
+    return temp
+}
+
+let arr4=["x","s","w"];
+
+///filter the given array
+/* eslint-disable id-length */
+"use strict";
+/**
+ * Returns array of string that have greater than i
+ *
+ * @param{Array}array of string
+ * @parami is compared with each string
+ * @return{Array} the array of string that have greater than i
+ */
+function filterLongestWords(arr, i) {
+let temp_arr = [];
+for (let j = 0; j < arr.length; j++) {
+if (arr[j].length > i) {
+      temp_arr.push(arr[j]);
+    }
+  }
+return temp_arr;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test.js">
+      
+
+
+var items = [];
+
+function guardarNumeros() {
+  boxvalue = document.getElementById('box').value;
+  items.push(boxvalue);
+  console.log(items);
+  return false; // stop submission
+}
+<form onsubmit="return guardarNumeros()">
+  <p>Please insert the items</p>
+  <input type="text" id="box">
+  <input type="submit" value="Submit">
+</form>
+ Run code snippet
+    </script>
+</head>
+<body>
+    
+    <button onclick="hello()"></button>
+    <form >
+        <p>Please insert the items</p>
+        <input type="text" id="box">
+       <button onclick="guardarNumeros()">submit</button>
+       </form>
+</body>
+</html>

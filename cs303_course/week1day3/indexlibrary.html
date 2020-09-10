@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="librarysystem.js"></script>
+</head>
+<body>
+
+    <fieldset>
+        <legend> liberary system</legend>
+        <label for="bookname">BookTitle</label><br>
+        <input type="text" name="bookname" id="bookname" placeholder="book name"size="50"><br>
+        <label for="author">Author</label><br>
+        <input type="text" name="author" id="author" placeholder="who is the author"size="50"><br>
+        <label for="liberary id">LiberaryID</label><br>
+        <input type="text" id="libID" placeholder="library id of the book" size="50"><br><br>
+        <button onclick="addbook()"  background-color: #4CAF50>Add book to library</button> 
+        <button  onmouseover="showtitle()">shoow titles</button>
+        <button onmouseover="showauthors()">Show Authors</button>
+        <button onmouseover="showid()">show IDs</button>
+        <br><br>
+        <p id="bookadd"></p>
+        <textarea name="display system board" id="display" cols="60" rows="10"></textarea>
+    </fieldset>
+  
+
+</body>
+</html>

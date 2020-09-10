@@ -1,4 +1,9 @@
 "use strict";
+
+/**
+ * 
+ * @param {number of collcetion then the max}
+ */
 /* global pow assert */
 describe("maximum of three num", function() {
 
@@ -13,7 +18,11 @@ describe("maximum of three num", function() {
   });
 
   "use strict";
-/* global pow assert */
+
+  /**
+   * sum of given array test case 
+   * 
+   */
 describe("the sum of the array", function() {
 
     it("the sum of 1,2,3,4=10", function() {
@@ -29,7 +38,10 @@ describe("the sum of the array", function() {
   });
 
   "use strict";
-/* global pow assert */
+
+  /**
+   * longest word in size  from the given array
+   */
 describe("longest word size from give array ", function() {
 
     it("from a,ab and acd then acd is long", function() {
@@ -44,7 +56,11 @@ describe("longest word size from give array ", function() {
   
   });
 
-
+/**
+ * check the parameter pash to the function it weather 
+ * it is vowel of not vowel
+ * 
+ */
 
   describe("isVowel", function () {
     it("a is vowel", function () {
@@ -69,3 +85,36 @@ describe("longest word size from give array ", function() {
     assert.equal(isVowel("5"), false);
     });
 });   
+
+/**
+ * 
+ * filter array test case
+ */
+
+describe("reverse array", function() {
+
+  it("kasahun will be nuhasak", function() {
+      let arr=["car","hello"]
+    assert.equal(reverse_array(arr),"rac","olleh");
+  }); 
+
+});
+
+"use strict";
+/* global sum assert */
+describe("filterLongestWords", function () {
+  it("['Adonay','Simon','Astuka','Fre'],5 is ['Adonay','Astuka']", function () {
+    assert.deepEqual(
+      filterLongestWords(["Adonay", "Simon", "Astuka", "Fre"], 5),
+      ["Adonay", "Astuka"]
+    );
+  });
+ 
+  it("['Roman','Kassa','Dani'], 4 is ['Roman','Kassa']", function () {
+    assert.deepEqual(filterLongestWords(["Roman", "Kassa", "Dani"], 4), [
+"Roman",
+"Kassa",
+    ]);
+  });
+});
+

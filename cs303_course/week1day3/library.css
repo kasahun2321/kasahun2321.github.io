@@ -1,0 +1,14 @@
+input
+{
+
+}
+
+label
+{
+    font: 100;
+}
+legend
+{
+    align-content: center;
+    border-block-end-style: dashed;
+}
