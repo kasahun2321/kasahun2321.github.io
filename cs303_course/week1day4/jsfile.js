@@ -11,7 +11,7 @@ console.log(f + s);
 ////////////////////////////////////////////////////////////////////
 
 function readNumber(){
-    letnum;
+    let num;
     do {
         num = prompt("please enter a number: ", 0);
     } while (!isFinite(num));
@@ -28,7 +28,7 @@ console.log(`The number is: ${readNumber()}`);
 // Because the condition is alwayes true. //
 
 function random(min, max){
-    returnmin + Math.random() * (max - min);
+    return min + Math.random() * (max - min);
 }
 
 console.log(random(1, 5));
@@ -38,8 +38,8 @@ console.log(random(1, 5));
 
 function random1(min, max){
 
-    letnum = min - 0.5 + Math.random() * (max - min + 1);
-    returnMath.trunc(num);
+    let num = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.trunc(num);
 }
 
 console.log(random1(-11, -5));
@@ -48,24 +48,24 @@ console.log(random1(1, 3));
 /////////////////////////////////////////////////////////////////////
 
 function getMaxSubSum(arr) {
-    letmaxSum = 0;
+    let maxSum = 0;
     for (leti = 0; i < arr.length; i++) {
-        letsumFixedStart = 0;
+        let sumFixedStart = 0;
         for (letj = i; j < arr.length; j++) {
             sumFixedStart += arr[j];
             maxSum = Math.max(maxSum, sumFixedStart);
         }
     }
-    returnmaxSum;
+    return maxSum;
 }
 
 //////////////////////////////////////////////////////////////////////
 
 function upperCaseFirstChar(str){
-    if (!str) returnstr;
-    letlower = str.toLowerCase();
+    if (!str) return str;
+    let lower = str.toLowerCase();
 
-    returnlower[0].toUpperCase() + lower.slice(1);
+    return lower[0].toUpperCase() + lower.slice(1);
 }
 
 console.log(upperCaseFirstChar("chris"));
@@ -74,7 +74,7 @@ console.log(upperCaseFirstChar("2"));
 ///////////////////////////////////////////////////////////////////////
 
 function checkSpam(str){
-    letstring = str.toLowerCase();
+    let string = str.toLowerCase();
 
     return (string.includes("the") || string.includes("of"));
 }
@@ -88,9 +88,9 @@ console.log(checkSpam("what is good"));
 function truncet(str, maxLength){
 
     if (str.length > maxLength) {
-        returnstr.slice(0, maxLength - 1) + "...";
+        return str.slice(0, maxLength - 1) + "...";
     } else {
-        returnstr;
+        return str;
     }
 }
 
