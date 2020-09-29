@@ -1,5 +1,6 @@
 
 /*eslint-disable*/
+const prompt=require('prompt-sync')();
 function Accumulator(startingValue) {
     this.value = startingValue;
     this.read = function() {

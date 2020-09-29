@@ -20,9 +20,9 @@ function camelize(str) {
   
   let filtered = filterRange(arr, 1, 4);
   
-  alert( filtered ); // 3,1 (matching values)
+  console.log( filtered ); // 3,1 (matching values)
   
-  alert( arr ); // 5,3,8,1 (not modified)
+  console.log( arr ); // 5,3,8,1 (not modified)
 
   ///filter
   function filterRangeInPlace(arr, a, b) {
@@ -43,7 +43,7 @@ function camelize(str) {
   
   filterRangeInPlace(arr2, 1, 4); // removed the numbers except from 1 to 4
   
-  alert( arr2 ); // [3, 1]
+  console.log( arr2 ); // [3, 1]
 
 
   //sort function
@@ -51,7 +51,7 @@ function camelize(str) {
 
 arr3.sort((a, b) => b - a);
 
-alert( arr3);
+console.log( arr3);
 
 ///copy sort
 function copySorted(arr) {
@@ -62,8 +62,8 @@ function copySorted(arr) {
   
   let sorted = copySorted(arr);
   
-  alert( sorted );
-  alert( arr4 );
+  console.log( sorted );
+  console.log( arr4 );
 
   ///extedable calculator
   function Calculator() {
@@ -101,7 +101,7 @@ let users = [ john, pete, mary ];
 
 let names = users.map(item => item.name);
 
-alert( names ); // John, Pete, Mary
+console.log( names ); // John, Pete, Mary
 
 //map to object
 let johnn = { name: "John", surname: "Smith", id: 1 };
@@ -117,8 +117,8 @@ let usersMapped = userss.map(user => ({
 
 
 
-alert( usersMapped[0].id ); // 1
-alert( usersMapped[0].fullName ); // John Smith
+console.log( usersMapped[0].id ); // 1
+console.log( usersMapped[0].fullName ); // John Smith
 
 ///sort by age
 function sortByAge(arr) {
@@ -134,9 +134,9 @@ function sortByAge(arr) {
   sortByAge(arr5);
   
   // now sorted is: [john1, mary1, pete1]
-  alert(arr5[0].name); // John
-  alert(arr5[1].name); // Mary
-  alert(arr5[2].name); // Pete
+  console.log(arr5[0].name); // John
+  console.log(arr5[1].name); // Mary
+  console.log(arr5[2].name); // Pete
 
 
   //shufle an array
@@ -165,7 +165,7 @@ function sortByAge(arr) {
   
   // show counts of all possible permutations
   for (let key in count) {
-    alert(`${key}: ${count[key]}`);
+    console.log(`${key}: ${count[key]}`);
   }
 
   //get average age
@@ -179,7 +179,7 @@ function sortByAge(arr) {
   
   let arr6 = [ john2, pete2, mary2 ];
   
-  alert( getAverageAge(arr6) ); // 28
+  console.log( getAverageAge(arr6) ); // 28
 
 
   //filter unique array memeber
@@ -199,7 +199,7 @@ function sortByAge(arr) {
     "Krishna", "Krishna", "Hare", "Hare", ":-O"
   ];
   
-  alert( unique(strings) ); // Hare, Krishna, :-O
+  console.log( unique(strings) ); // Hare, Krishna, :-O
 
   //Create keyed object from array
   let users2 = [
