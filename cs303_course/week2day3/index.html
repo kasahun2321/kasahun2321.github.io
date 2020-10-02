@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+    <script>
+     
+    </script>
+
+    <!-- the script with tests (describe, it...) -->
+    <script src="Array method practice.js"></script>
+    <script src="Calculate factorial.js"></script>
+    <script src="Fibonacci numbers.js"></script>
+    <script src="Output a single-linked list in reverse order.js"></script>
+    <script src="recursive function that will print name-value.js"></script>
+    <script src="single-linked list.js"></script>
+    <script src="Sum all numbers till.js"></script>
+    <h1> Recursion part assignement </h1>
+   <div class="row">
+    <div class="col-sm-4"> </div>
+    <div class="col-sm-10">
+     <ul>
+         <li><a href="Sum all numbers till.js">sum of all number array using recursive function</a></li>
+         <li><a href="Calculate factorial.js">Calculating factorial </a></li>
+         <li><a href="Fibonacci numbers.js">Fibonaci number of recurson</a></li>
+         <li><a href="single-linked list.js">Out put of single linked list</a></li>
+         <li><a href="Output a single-linked list in reverse order.js">Out put of single linked list in reverse order</a></li>
+       
+         </a></li>
+
+         
+         
+         
+         
+     </ul>
+   </div>
+   </div>
+
+
+   <h1>Mocha test and array method impelemantation</h1>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>
