@@ -241,3 +241,15 @@ describe("odd age average",function () {
   
 });
 }
+
+{
+  ///chaining array method 
+  // // - use a chain of map filter reduce to find the average age of people with even number ages
+// // - use a chain of map filter reduce to find the average age of people with odd number ages
+const agearrray=peopleArray.map(pullage);
+console.log(agearrray)
+function pullage()
+{
+  return peopleArray.age;
+}
+}

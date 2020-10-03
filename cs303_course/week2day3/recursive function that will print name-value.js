@@ -103,6 +103,9 @@ function contains(node, target) {
     if (node.name === target) {
       return true;
     }
+    else{
+      return false;
+    }
   }
   else {
     let childresult = false;
