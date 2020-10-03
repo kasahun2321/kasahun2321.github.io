@@ -5,7 +5,7 @@
  * 
  */
 class TreeNode {
-    constructor(value) {
+    constructor (value) {
     this.value = value;
     this.descendents = [];
     }
@@ -103,7 +103,7 @@ function contains(node, target) {
             return TreeNode;
         } 
         for (let child of TreeNode.descendents) {
-            childResult = contains(child, target);
+            childResult = subtree(child, target);
             if (childResult === TreeNode) {
                 return TreeNode;
             }
@@ -184,3 +184,36 @@ function caps(node){
 
 console.log("the tree modifier reuls",treeModifier(abe, caps));
 console.log('now tree has stars', abe);
+
+// creating list based on class
+// Create a new class ListNode (based on TreeNode below) and use it to generate a linked list of
+// Abe, Homer, Bart, Lisa, Maggie instead of a tree.
+{
+
+    // class linkedlist{
+    //     constructor( name,next)
+    //     {
+    //         this.name=name;
+    //         this.next=next;
+    //     }
+    // }
+
+    // class TreeNode1 {
+    //     constructor (name,value) {
+    //     this.name = name;
+    //     this.next = value;
+    //     }
+    //    }
+
+    //    const abe = new TreeNode1('Abe',null);
+    //    console.log(abe)
+    let lisa={name:"Lisa",next:null}
+    let berta={name:"Berta",next:null}
+    let maggie={name:"Maggie",next:null}
+    let hommer={name:"Hommer",next:[maggie,berta,lisa]}
+    let abe={name:"Abe",next:hommer}
+    console.log(abe);
+
+
+
+}
