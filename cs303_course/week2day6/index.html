@@ -20,25 +20,37 @@
 <body>
 
     <script>
-     
+
     </script>
 
     <!-- the script with tests (describe, it...) -->
     <script src="filterInbetewen.js"></script>
-    <script src="crudlist.js"></script>
- 
-
-   <div class="row">
-    <div class="col-sm-4"> </div>
-    <div class="col-sm-10">
-     <ul>
-   see console 
-     </ul>
-   </div>
-   </div>
+    <script src="army.js"></script>
+    <script src="advancedConceptClosuer.js"></script>
+    <script src="sort.js"></script>
 
 
-   
+    <div class="row">
+        <div class="col-sm-4"> </div>
+        <div class="col-sm-10">
+            <ul>
+
+                <li>Does a function pickup latest changes? = yes </li>
+                <li> Which variables are available? the shadow one pete.</li>
+                <li> Are counters independent? yes becouse count is local </li>
+                <li> Counter object: works fine</li>
+                <li> Function in if: function call is ouside of the if scope so it cant access:eror</li>
+                <li> Sum with closures :yes</li>
+                <li> Is variable visible? error using variable before initaliazing</li>
+                <li> Filter through function : see console</li>
+                <li> Sort by field : see console</li>
+                <li> Army of functions see console</li>
+            </ul>
+        </div>
+    </div>
+
+
+
 
     <!-- the element with id="mocha" will contain test results -->
     <div id="mocha"></div>
@@ -47,6 +59,10 @@
     <script>
         mocha.run();
     </script>
+
+    <div>
+        <img src="lexical enviroment drawing.PNG" alt="LE drawinf" height="270" width="600">
+    </div>
 </body>
 
 </html>

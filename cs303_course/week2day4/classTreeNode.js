@@ -212,8 +212,24 @@ console.log('now tree has stars', abe);
     let maggie={name:"Maggie",next:null}
     let hommer={name:"Hommer",next:[maggie,berta,lisa]}
     let abe={name:"Abe",next:hommer}
-    console.log(abe);
+    //console.log(abe);
 
+  function linkedlist(arg)
+  {let x=arg.name;
+  let z=arg.next;
+    if(z===null)
+    {
+      return x
+    }
+    else
+    {
+    for (let y in arg.name)
+    {
+linkedlist(y)
 
+    }}
+    return x,z;
+  }
+  console.log(linkedlist(abe))
 
 }
