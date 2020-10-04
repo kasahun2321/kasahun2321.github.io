@@ -1,0 +1,261 @@
+/*  style sheet */
+
+body{
+    background: #eeecec;
+}
+
+
+/* style for toogle button */
+
+.button-bars, .navbar-toggle .button-label {
+    display: inline-block;
+    float: left;
+    
+}
+
+
+.navbar ul {
+    
+    text-align: center;
+}
+
+.navbar.white .navbar-header .navbar-toggle {
+    margin-top: 17px;
+}
+
+.navbar-toggle {
+    border: 2px solid #337ab7!important;
+    
+}
+
+
+.navbar-toggle .button-label {
+    font-weight: 700;
+    line-height: 14px;
+    padding-right: 10px;
+    color: #337ab7!important;
+}
+
+/* style for toogle button  ends here*/
+
+
+.text-white{
+    
+    color:#fff!important;
+    font-weight: bold;
+}
+
+.text-blue{
+    
+    color:#337ab7!important;
+    font-weight: bold;
+}
+
+.text-white:hover{
+    background-color: #e7e7e7;
+    color:#000!important;
+    
+}
+
+.navcat-color a{
+    
+    color: #337ab7!important;
+    font-weight: bold;
+}
+
+
+header{
+
+    min-height: 100%;
+    padding-top: 10px;
+    
+}
+
+header ul {
+    
+    list-style: none;
+    float: right;
+    padding-top: 10px;
+}
+
+header .logo {
+    
+    float:left;
+}
+
+/* slider */
+
+.carousel {
+    
+    max-height: 400px;
+    margin-bottom: 50px;
+    border: 10px solid #337ab7;
+}
+
+
+.carousel-caption {
+    
+    z-index: 10;
+    text-align: left;
+    top: -10px;
+    right: 10%;
+    left: 10%;
+    font-size: 19px;
+}
+
+.carousel .item {
+    
+    height: 100%;
+    background-color: #777;
+}
+
+.post a{
+	
+	text-decoration:none;
+	
+}
+
+.post-info {
+    
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	font-style:italic;
+}
+
+
+/* sign in page styles */
+
+    .form-signin {
+          max-width: 330px;
+          padding: 15px;
+          margin: 0 auto;
+          border: 1px solid #ccc;
+          background: #fff;
+          border-radius: 10px;
+    }
+    
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+
+              margin-bottom: 10px;
+
+    }
+    
+    .form-signin .checkbox {
+    
+         font-weight: normal;
+     
+    }
+    
+    .form-signin .form-control {
+         
+          position: relative;
+          height: auto;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 10px;
+          font-size: 16px;
+    
+    }
+    
+     .form-signin .form-control:focus {
+                z-index: 2;
+    }
+    .form-signin input[type="email"] {
+             
+              margin-bottom: -1px;
+              border-bottom-right-radius: 0;
+              border-bottom-left-radius: 0;
+    
+}
+    .form-signin input[type="password"] {
+          
+          margin-bottom: 10px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+    
+    }
+
+
+.container-login{
+    
+    padding: 60px 0;
+}
+
+
+.upload {
+    
+    border: 1px solid #ccc!important;
+}
+
+
+
+.nav > li {
+		
+		border-right:2px solid #337ab7!important;
+		
+		 }
+
+
+.actions {
+    
+    float: right;
+    margin-top: 30px;
+}
+
+.blue {
+	
+  background:#0CF;
+
+}
+
+
+.yellow {
+	
+  background:#FF3;
+
+}
+
+
+.red {
+	
+  background:#0F6;
+
+}
+
+
+footer {
+    
+    background: #f4f4f4;
+    height: 90px;
+    color: #337ab7;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 30px;
+    border-top:7px solid #337ab7; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

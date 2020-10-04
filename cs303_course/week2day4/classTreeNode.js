@@ -117,7 +117,7 @@ desciption ("print the sub tree", function()
 {
     it ("the sub tree objects value",function()
     {
-        assert.deepEqual(subtree(abe,"Abe"),0)
+        assert.deepEqual(subtree(homer,"Homer"),0)
     });
 });
 
