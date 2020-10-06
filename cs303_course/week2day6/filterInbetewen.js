@@ -1,6 +1,6 @@
 
 "use strict"
-/*eslint-disable*/
+;/*eslint-disable*/
 /* .. your code for inBetween and inArray */
 let arr = [1, 2, 3, 4, 5, 6, 7];
 
