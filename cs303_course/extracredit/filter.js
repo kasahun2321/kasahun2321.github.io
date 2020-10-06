@@ -8,11 +8,14 @@
 function myFilter(arr,func){
     const  myarray = [];
     for(let element of arr){
-        myarray.push(func(element));
+        
+            if(func(element)){
+                myarray.push(func(element))
+            }
     }
     return myarray;
 }
-let myarray = [1,2,3];
+let myarray = [1,2,3,-3,-7];
 /**
  * 
  * @param {*} num which takes number
@@ -20,7 +23,7 @@ let myarray = [1,2,3];
  */
 function checkFilter(num){
     if(num%2===0){
-        return num
+        return num;
     }
 }
 console.log(myFilter(myarray,checkFilter))
