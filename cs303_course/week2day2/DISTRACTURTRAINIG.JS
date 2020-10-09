@@ -15,8 +15,7 @@ let x="kasahun shimelis"
 let [fname,lname]=x.split(" ")
 console.log(fname)
 console.log(lname)
-let [a,b,,c,d,,e,f,g]=[1,2,3,4,5,6,7,8,9]
-console.log(a,b,c,d,e,f,g)
+
 
 
 let person={
@@ -24,7 +23,7 @@ let person={
   age:"24",
   height:"6"
 };
-
+//this is error code becouse the name of object and distructured  object name are different
 let {m,n,k,l}=person;
 console.log(m,n,k,l)
 
