@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <center>
+        <h1>My modified tic tac toe</h1>
+        <p>for reference see the real tic tac toe site </p>
+        <p><a href="https://www.thatsoftwaredude.com/content/6189/coding-tic-tac-toe-in-javascript">tic tak toe </a></p>
+    </center>
+    <div class="game">
+        <div class="game-title" contenteditable="true">Tic Tac Toe</div>
+        <div class="player" contenteditable="true">
+            Player 1
+            <div style="font-size:30pt;" id="player1" class="selected" contenteditable="true">
+                0
+            </div>
+        </div>
+
+        <table id="game" class="tictactoe" style="float:left;width:45%;" contenteditable="true">
+        </table>
+
+        <div class="player" contenteditable="true">
+            Player 2
+            <div id="player2" style="font-size:30pt;" contenteditable="true">0</div>
+        </div>
+
+        <div class="clear" contenteditable="true"></div>
+    </div>
+    <script src="tictactoe.js" async defer></script>
+</body>
+
+</html>

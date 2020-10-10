@@ -19,7 +19,9 @@ let prompt=require('prompt-sync')();
         },
     };
  
-    askPassword.apply(user, [user.loginOk.bind(user), user.loginFail.bind(user)]);
-    // OR
-    // askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
+    // first method ==>askPassword.apply(user, [user.loginOk.bind(user), user.loginFail.bind(user)]);
+
+    //  second way===> askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
+   //Or
+    askPassword(function(){user.loginOk.apply(user)},function(){user.loginFail.apply(user)})
 }
