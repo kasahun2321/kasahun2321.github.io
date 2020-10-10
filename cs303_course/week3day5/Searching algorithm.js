@@ -39,24 +39,24 @@ console.log(  pockets.pen);//will be 3
 console.log( bed.glasses ); // 1
 console.log( table.money ); // undefined
     
-  /**
-   * 
-   * @param {number} a this is numberic
-   * @param {number} b  number
-   * @returns {number} any number
-   */
-  function numsum(a,b)
-  {
-return a+b;
-  } 
+//   /**
+//    * 
+//    * @param {number} c this is numberic
+//    * @param {number} d  number
+//    * @returns {number} any number
+//    */
+//   function numsum(c,d)
+//   {
+// return c+d
+//   } 
 
-  /**
-   * 
-   * @param {number} a this is numberic
-   * @param {number} b  number
-   * @returns {number} any number
-   */
-  function multiplication(a,b)
-  {
-      return a+b
-  }
+//   /**
+//    * 
+//    * @param {number} a this is numberic
+//    * @param {number} b  number
+//    * @returns {number} any number
+//    */
+//   function multiplication(a,b)
+//   {
+//       return a+b
+//   }

@@ -1,4 +1,9 @@
 /*eslint-disable*/
+
+/**
+ * winner is an array
+ * 
+ */
 var winners = new Array();
 var player1Selections = new Array();
 var player2Selections = new Array();
@@ -8,6 +13,9 @@ var points2 = 0;    // player 2 points
 var size = 3;
 
 // JavaScript
+/**
+ * @param{*}no parammeter to pas
+ */
 function drawBoard() {
     var parent = document.getElementById("game");
     var counter = 1;
@@ -26,7 +34,10 @@ function drawBoard() {
 }
 
 var winners = new Array();
-
+/**
+ * no parammeter
+ * used to laod the game 
+ */
 function loadAnswers() {
     winners.push([1, 2, 3]);
     winners.push([4, 5, 6]);
@@ -105,6 +116,11 @@ function drawBoard() {
 
     loadAnswers();
 }
+/**
+ * 
+ * 
+ * checkwinner with out parameter
+ */
 
 function checkWinner() {
     // check if current player has a winning hand
@@ -172,6 +188,9 @@ else if (player2Selections.length + player1Selections.length == 9) {
     reset();
     drawBoard();
 }
+/**
+ * clear the drawing
+ */
 
 function reset() {
     currentPlayer = 0;

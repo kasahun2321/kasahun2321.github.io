@@ -21,7 +21,7 @@ let animal = {
     __proto__: animal
   };
   
-  rabbit.eat();//
+  rabbit.eat();//at this time rabit is the main object for result we get 
 
   /**
    * rabbit object can inherit all the feature of animel object properties.
