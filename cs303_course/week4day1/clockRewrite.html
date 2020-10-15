@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewriting constractor to class</title>
+</head>
+<body>
+     <h1>see the console to the result</h1> 
+     <pre>
+         <h3>
+            ➢ You can simplify the constructor parameter to just take a string instead of using the object
+            destructuring syntax // done
+            ➢ Also add a line of code that will stop the clock after 10 ticks
+            ➢ What is the inner function of the constructor function?
+            ➢ What is the local variable of the constructor function?//
+            ➢ What is the clock “interface” returned by the constructor function? // template variable value
+            ➢ What are the closures? 
+            ➢ What are the private variables and functions?//date,hour,mins,sec variablse 
+            ➢ What are the public methods? //stop,start,render
+            ➢ How does this example illustrate that a JavaScript class is really a function and not an object?
+         </h3>
+     </pre>
+<script>
+
+  class Clock {
+    constructor(template) {
+      this.template = template;
+    }
+  
+    render() {
+      let date = new Date();
+  
+      let hours = date.getHours();
+      if (hours < 10) hours = '0' + hours;
+  
+      let mins = date.getMinutes();
+      if (mins < 10) mins = '0' + mins;
+  
+      let secs = date.getSeconds();
+      if (secs < 10) secs = '0' + secs;
+  
+      let output = this.template + hours+"hr" + ":"+mins+"mn"+":"+secs+"sec";
+  
+      console.log(output);
+    }
+  
+    stop() {
+      //clearInterval(this.timer);
+      setTimeout(clearInterval(() => this.timer, 5000));
+    }
+  
+    start() {
+      this.render();
+      this.timer = setInterval(() => this.render(), 1000);
+    }
+  }
+  
+  let template=" "; 
+  let clock = new Clock(template);
+  clock.start();
+  clock.stop();
+
+</script>
+
+</html>
+    
+</body>
+</html>

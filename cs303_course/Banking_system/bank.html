@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/9.2.0/sinon.min.js"></script>
+  <script src=""></script>
+ 
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+
+ see console 
+
+  <!-- the script with tests (describe, it...) -->
+
+  <script src="./account.js"></script>
+  <script src="./script.js"></script>
+    <script src="./savingaccount.js"></script>
+    <script src="./test.js"></script>
+    <script src="./CheckingAccount.js"></script>
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+see console for bankig system
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
