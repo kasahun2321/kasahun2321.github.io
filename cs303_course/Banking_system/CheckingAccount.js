@@ -42,6 +42,11 @@ class CheckingAccount extends Account
          this.interest=newinterest;
      }
 
+     endoFMonth()
+     {
+         
+     }
+
  }
 
  const testsaving = new SavingsAccount(1234,3)

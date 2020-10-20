@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <script>
-//"use strict"
-function perimeter()
-{
-  console.log(this);
-  return 4*this.side;
-}
+    //"use strict"
+    function perimeter() {
+      console.log(this);
+      return 4 * this.side;
+    }
 
-const shape={side:5,perimeter:perimeter};
-shape.perimeter();
-const myprem=shape.perimeter;
-myprem();
+    const shape = { side: 5, perimeter: perimeter };
+    console.log(shape.perimeter());
+    // const myprem=shape.perimeter;
+    // myprem();
+
+    function makeWithdraw() {
+      let accounts = []
+      return function (name, amount) {
+        for (let i = 0; i < accounts.length; i++) {
+          if (accounts[i].name === name) {
+            if (accounts[i].checkingBalance >= amount) {
+              accounts[i].checkingBalance -= amount;
+            } else {
+              if ((accounts[i].savingBalance +
+                accounts[i].checkingBalance) > amount) {
+                accounts[i].checkingBalance = 0;
+                amount -= accounts[i].checkingBalance;
+                accounts[i].savingBalance -= amount;
+              } else {
+                return 'You need to earn more money !!!'
+              }
+            }
+          }
+        }
+      }
+    } 
   </script>
-  
+
 </body>
+
 </html>

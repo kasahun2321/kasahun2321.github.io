@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <script src="./canteen.js"></script>
+    <script src="./action.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>Welcome to the Cafeteria</h1>
+        <label>Please enter your name:</label> 
+        <input type="text" id="student_name"/>
+        <button onclick="pullInfo()">Pull Info</button><span id="info">Enter your name and click Pull Info button</span><br/>
+        <button onclick="add(event)" value="pizza"><img src="./images/pizza.png" width="200" height="200"/></button>
+        <button onclick="add(event)" value="pasta"><img src="./images/pasta.jpg" width="200" height="200"/></button>
+        <button onclick="add(event)" value="pie"><img src="./images/pie.png" width="200" height="200"></button>
+        
+        <table id="shopping_cart">
+            <caption>Shopping Cart</caption>
+            <tr><th>Item</th><th>Price</th></tr>
+        </table>
+
+        <br/><br/><button id="btn-purchase" onclick="makePurchase()">Purchase</button>
+        <button id="btn-reset" onclick="resetShoppingCart()">Reset</button>
+    </div>
+</body>
+</html>

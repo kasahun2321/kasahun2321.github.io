@@ -42,6 +42,10 @@
      {
          this.interest=newinterest;
      }
+     endoFMonth()
+     {
+         
+     }
 
  }
 

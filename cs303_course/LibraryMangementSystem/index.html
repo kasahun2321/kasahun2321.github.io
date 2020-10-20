@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./library.js"></script>
+</head>
+<body>
+    <hr><hr>
+<fieldset>
+
+
+<legend> <center><h1>Simple library system</h1></center></legend>
+
+<label for="id" > bookId</label> <input type="text" id="id"><br><br>
+
+<label for="id" id="id">bookname</label><input type="text" id="bookname"><br><br>
+<label for="id" id="id">registered date</label><input type="date" id="date"><br><br>
+<input type="button"  onclick="addbook()" value="submit">
+<br>
+<br><hr>
+<center><button onclick="borrowbook()">Borrow book</button> <button onclick="returnbook()">Return book</button><button onclick="extenddate()">Extend date</button></center>
+
+</fieldset>
+    
+<fieldset>
+    <legend><h3>Book shelf</h3></legend>
+    <table id="bookshelf" width=800 border="1px no-repet" border-collapse: collapse;>
+        <h3>book store</h3>
+          <tr><th>ID</th><th>Name</th><th>Date</th><th>Edit</th><th>Delete</th></tr>
+      </table>
+</fieldset>
+
+
+
+
+</body>
+</html>
