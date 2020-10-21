@@ -1,6 +1,6 @@
 
 /*eslint-disable*/
-class ApplicationError extends Error{};
+class ApplicationError extends Error { };
 
 class Student {
     constructor(name, libraryCard) {
@@ -8,45 +8,45 @@ class Student {
         this._libraryCard = libraryCard;
     }
 
-    get name(){
+    get name() {
         return this._name;
     }
 
-    set name(name){
+    set name(name) {
         this._name = name;
     }
 
-    get libraryCard(){
+    get libraryCard() {
         return this._libraryCard;
     }
 
-    set libraryCard(libraryCard){
+    set libraryCard(libraryCard) {
         this._libraryCard = libraryCard;
     }
 
     checkOutBook(book) {
         let count = 0;
         let now = new Date();
-        if(this.libraryCard.booksOut.length > 0){
-            for(let book of this.libraryCard.booksOut){
-                if(now !== book.dueDate){
-                    count ++;
+        if (this.libraryCard.booksOut.length > 0) {
+            for (let book of this.libraryCard.booksOut) {
+                if (now !== book.dueDate) {
+                    count++;
                 }
             }
         } else {
             this.libraryCard.booksOut.push(book);
             book.dueDate = book.calcDueDate();
         }
-        if(count){
+        if (count) {
             this.libraryCard.booksOut.push(book);
-            book.dueDate = book.calcDueDate(); 
+            book.dueDate = book.calcDueDate();
         }
     }
     returnBook(book) {
-        for(let volume of this.libraryCard.booksOut){
-            if(volume.name === document.getElementById("book_title").value){
+        for (let volume of this.libraryCard.booksOut) {
+            if (volume.name === document.getElementById("book_title").value) {
                 let index = this.libraryCard.booksOut.indexOf(book);
-                this.libraryCard.booksOut.splice(index,1); 
+                this.libraryCard.booksOut.splice(index, 1);
             }
         }
     }
@@ -56,28 +56,28 @@ class Book {
     constructor(name, author) {
         this.name = name;
         this.author = author;
-        this.calcDueDate = function(){
-            let numWeeks = 2;
+        this.calcDueDate = function () {
+            //let numWeeks = 1;
             let now = new Date();
-            now.setDate(now.getDate() + numWeeks * 7)
+            now.setDate(now.getDate() - 7)
             return now;
         }
-       
+
         this._dueDate = 0;
-        this.overDueFee = function(){
-            let overDueRate = 0.05;
+        this.overDueFee = function () {
+            let overDueRate = 1;
             const date1 = new Date(this.dueDate);
             const date2 = new Date();
             let diffTime = date2 - date1;
-            if(diffTime < 0){
+            if (diffTime < 0) {
                 diffTime = 0;
             }
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             return `$${overDueRate * diffDays}`
         }
-    } set dueDate (date){
+    } set dueDate(date) {
         this._dueDate = date;
-    } get dueDate (){
+    } get dueDate() {
         return this._dueDate;
     }
 }
@@ -86,10 +86,10 @@ class LibraryCard {
     constructor() {
         this._booksOut = [];
     }
-    set booksOut(book){
+    set booksOut(book) {
         this._booksOut += book;
     }
-    get booksOut(){
+    get booksOut() {
         return this._booksOut;
     }
 }
@@ -110,14 +110,11 @@ class Library {
     }
 }
 
-
 const libraryBooks = new Map()
 
-// libraryBooks.set("javascript and jquery by JON DUCKETT", new Book("javascript and jquery by ", "JON DUCKETT"));
-// libraryBooks.set("Inheritance", new Book("Inheritance", "Christopher Paolini"));
-// libraryBooks.set("Godel, Escher, Bach: an Eternal Golden Braid", new Book("Godel, Escher, Bach: an Eternal Golden Braid", "Douglas HofStadter"));
+
 libraryBooks.set("javascript and jquery by JON DUCKETT", new Book("javascript and jquery by ", "JON DUCKETT"));
-libraryBooks.set("Introduction to statistical learning", new Book("Introduction to statistical learning" , "Gareth James"));
+libraryBooks.set("Introduction to statistical learning", new Book("Introduction to statistical learning", "Gareth James"));
 libraryBooks.set("Programing fundametals in JS", new Book("Programing fundametals in JS", "REX A.BARZEE"));
 
 

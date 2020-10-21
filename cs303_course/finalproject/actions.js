@@ -1,12 +1,13 @@
 /*eslint-disable*/
 
-function returnBook(){
+function returnBook() {
     let student = library.students.get(document.getElementById("student_name").value);
     let book = library.librarybooks.get(document.getElementById("book_title").value);
     student.returnBook(book);
+    displayInfo();
 }
 
-function returnAllBooks(){
+function returnAllBooks() {
     let student = library.students.get(document.getElementById("student_name").value);
     let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
     document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
@@ -16,6 +17,7 @@ function returnAllBooks(){
 function add(event) {
     let book = library.librarybooks.get(event.target.parentNode.value);
     checkOut(book);
+    displayInfo();
 }
 
 function updateBooksOut(book) {
@@ -27,13 +29,9 @@ function updateBooksOut(book) {
     td2.innerHTML = book.overDueFee();
     let td3 = document.createElement("td");
     td3.innerHTML = book.dueDate;
-    let td4= document.createElement("td");
-    // td4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-    // <a onClick="onDelete(this)">Delete</a>`;
     row.append(td1);
     row.append(td2);
-    row.append(td3);  
-   // row.append(td4);
+    row.append(td3);
     table.append(row);
 }
 
@@ -52,9 +50,9 @@ function pullInfo() {
 function displayInfo() {
     clearAllBooks();
     let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
-    document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books }`;
-    if(currentStudent.libraryCard.booksOut.length > 0){
-        for(let book of currentStudent.libraryCard.booksOut){
+    document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
+    if (currentStudent.libraryCard.booksOut.length > 0) {
+        for (let book of currentStudent.libraryCard.booksOut) {
             let table = document.getElementById("booksOut");
             let row = document.createElement("tr");
             let td1 = document.createElement("td");
@@ -72,7 +70,7 @@ function displayInfo() {
 }
 
 function checkOut(book) {
-    if(!currentStudent){
+    if (!currentStudent) {
         alert("Please select a student first.")
         return;
     }
@@ -87,13 +85,13 @@ function checkOut(book) {
         }
     }
     let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
-    document.getElementById("info").innerHTML = (`welcome to library ${books }`);
+    document.getElementById("info").innerHTML = (`welcome to library ${books}`);
 }
 
-function clearAllBooks(){
+function clearAllBooks() {
     let table = document.getElementById('booksOut');
     let rows = document.querySelectorAll('#booksOut>tr')
-    for(let i=rows.length; i>0; i--){
+    for (let i = rows.length; i > 0; i--) {
         table.deleteRow(i);
     }
 }
