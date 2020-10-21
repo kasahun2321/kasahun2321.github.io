@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       Simple Library managment system
+    </title>
+    <link rel="stylesheet" href="a.css">
+</head>
+
+<body>
+
+<hr/>
+<hr/>
+<center><h1> simple library mangment system</h1></center>
+    
+        
+                <form onsubmit="event.preventDefault();onFormSubmit();" >
+                    <div>
+                        <label>Bookname*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Book ID</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Author</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>Date IN to Store</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            
+            
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Book Name</th>
+                            <th>Bood ID</th>
+                            <th>Author</th>
+                            <th>Date IN</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+	
+	
+    <script src="a.js"></script>
+</body>
+
+</html>

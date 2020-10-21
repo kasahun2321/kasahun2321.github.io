@@ -1,12 +1,18 @@
 /* eslint-disable */
 
+
+let prompt = require('prompt-sync')();
+let bookstor=[];
 class Book {
-    constructor(title = "unknown", author = "unknown", chargePerDay = 0.5, maximumCharge = 20) {
+    constructor(title = "unknown", author = "unknown", chargePerDay = 0.5, maximumCharge = 20 )
+     {
         this.title = title;
         this.author = author;
         this.chargePerDay = chargePerDay;
         this.maximumCharge = maximumCharge;
     }
+
+   
 }
 class Loan {
     constructor(book, dueDate) {
@@ -30,7 +36,7 @@ class LibraryMember {
     addToLoan(loan) {
         this.loans.push(loan);
     }
-    computeCharge(returnDate = new Date()) {
+    computeCharge(returnDate) {
         let charge = 0.0;
         for (let loan of this.loans) {
             charge += loan.computeCharge(returnDate);
@@ -44,11 +50,18 @@ class Library {
         this.books = books;
         this.members = members;
     }
-    addMember(newMember) {
+    addMember(username,role) {
+        let newMember={username, role}
         this.members.push(newMember);
     }
-    addBook(newBook) {
-        this.books.push(newBook);
+    addBook(bookname, id) {
+        let newBookname = {bookname, id }
+        this.books.push(newBookname);
+    }
+    showbook() {
+
+       
+        return this.books.name + this.books.id;
     }
 }
 
@@ -57,89 +70,73 @@ function main() {
     const BOOKS = [
         new Book(),
         new Book("Intro to oop with JavaScript"),
-        new Book("JS Dummies", chargePerDay = 1, maximumCharge = 50),
+        new Book("JS Dummies", chargePerDay = 1, maximumCharge = 20),
         new Book("oopjava", chargePerDay = 1, maximumCharge = 30),
     ];
-    const MEMBERS = [new LibraryMember("Jack"),
-                        new LibraryMember("aman")];
+
+    let choice = prompt(`
+               ======== Select Menu=======
+               ========= 1  To add book=========
+               ========= 2  To borrow book========
+               ========= 3  To show borrowers=====  \n`)
+
+    if (choice == 1) {
+        let libraryobj = new Library();
+        let bname = prompt("book name")
+        let id = prompt("enter book id")
+
+        libraryobj.addBook(bname, id)
+
+        console.log("book is added ")
+        console.log("book in store:", libraryobj.showbook())
+
+
+    }
+    else if (choice == 2) {
+       // let bookinstore=
+
+
+    }
+    else if (choice == 3) {
+        let nameinput = prompt("Enter name  ")
+
+        const MEMBERS = [new LibraryMember(nameinput)];
+        //new LibraryMember("aman")];
+
+        const LIBRARY = new Library(BOOKS, MEMBERS);
+
+        const adduser = new LibraryMember(nameinput);
+        //const jack = new LibraryMember("Jack");
+        //const aman = new LibraryMember("aman");
+        LIBRARY.addMember(adduser);
+        //LIBRARY.addMember(jack);
+        //LIBRARY.addMember(aman);
+
+        LIBRARY.addBook(new Book("code"))
+        LIBRARY.addBook(new Book("mathmathics"))
+
+
+        // jack.addToLoan(new Loan(BOOKS[3], new Date(2020, 08, 1)));
+        // jack.addToLoan(new Loan(BOOKS[0], new Date(2020, 07, 01)));
+        // jack.addToLoan(new Loan(BOOKS[0], new Date(2020, 06, 01)));
+
+        //adduser.addToLoan(new Loan(BOOKS[1], new Date(2020, 08, 1)));
+        adduser.addToLoan(new Loan(BOOKS[0], new Date(2020, 07, 1)));
+        let returndate1 = new Date();
+
+        console.log(adduser.computeCharge(returndate1));
+        //console.log(jack);
+        console.log(adduser);
+        //console.log(aman.computeCharge());
+        //console.log(aman);
+    }
+
     
-    const LIBRARY = new Library(BOOKS, MEMBERS);
 
-    const jack = new LibraryMember("Jack");
-    const aman = new LibraryMember("aman");
-    LIBRARY.addMember(jack);
-    LIBRARY.addMember(aman);
-    LIBRARY.addBook(new Book("code"))
-    LIBRARY.addBook(new Book("mathmathics"))
-
-    jack.addToLoan(new Loan(BOOKS[3], new Date(2020, 08, 1)));
-    jack.addToLoan(new Loan(BOOKS[0], new Date(2020, 07, 01)));
-    jack.addToLoan(new Loan(BOOKS[0], new Date(2020, 06, 01)));
-
-    console.log(jack.computeCharge());
-    console.log(jack);
-    console.log(aman.computeCharge());
-    console.log(aman);
 }
 
 main();
 
 
 
-
-
-
-//class library
-// {
-//     constructor(bookid,name,user)
-//     {
-
-//         this.bookid=bookid;
-//         this.name=name;
-//         this.user
-//     }
-
-//     set bookid(id)
-//     {
-//         this.bookid=id;
-//     }
-//     get bookid()
-//     {
-//         return this.bookid;
-//     }
-//     set Bookname(name)
-//     {
-//         this.name=name;
-//     }
-
-//     set user(user)
-//     {
-//         this.user=user;
-//     }
-//     get user()
-//     {
-//         return this.user;
-//     }
-//     setbookstore(title,bookid,author,BookAddDate)
-//     {
-
-//         let item=
-//         {
-//             title:this.title,
-//             BookID:this.BookID,
-//             author:this.author,
-//             bookaddDate:this.BookAddDate
-//         };
-        
-//         bookstor=bookstor.push(item)
-
-//     }
-
-// }
-
-// let obj=new library(
-//     document.getElementById("title").Value,
-//     document.getElementById("BookID").Value,
-//     document.getElementById("author").Value,
-//     document.getElementById("BookAddDate").Value)
 

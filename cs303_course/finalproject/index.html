@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <script src="./library.js"></script>
+    <script src="./actions.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend><center><h1>Simple LIbrary Mangment System</h1></center></legend><hr><hr>
+        <div id="main">
+            <label>Please enter your name:</label> 
+            <input type="text" id="student_name"/>
+            <button onclick="pullInfo()">Pull Info</button><span id="info">Enter your name and click Pull Info button</span><br/>
+            <button onclick="add(event)" value="javascript and jquery by JON DUCKETT">
+                <img src="http://javascriptbook.com/press/library/jpgs/javascript-book-cover.jpg" width="200"
+                    height="200" /></button>
+            <button onclick="add(event)" value="Introduction to statistical learning">
+                <img src="https://qz.com/wp-content/uploads/2018/02/statisticallearning.jpg?quality=80&strip=all&w=4000"
+                    width="200" height="200" /></button>
+            <button onclick="add(event)" value="Programing fundametals in JS">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51riaGndv3L._SY346_.jpg" width="200"
+                    height="200"></button>
+            
+            
+            <input type="text" id="book_title"/>
+            
+    </fieldset>
+    <fieldset>
+        <legend><h1>Book out for loan</h1></legend><hr>
+        <button onclick="returnBook()">Return Book</button>
+        <table id="booksOut">
+            <caption>Books Checked Out</caption>
+            <tr><th>Book</th><th>Fee</th><th>DueDate</th></tr>
+        </table>
+
+        
+        <button id="btn-reset" onclick="clearAllBooks()" background-color="yellow">Reset</button>
+
+    </fieldset>
+    </div>
