@@ -57,7 +57,7 @@ class Book {
         this.name = name;
         this.author = author;
         this.calcDueDate = function () {
-            //let numWeeks = 1;
+            
             let now = new Date();
             now.setDate(now.getDate() - 7)
             return now;

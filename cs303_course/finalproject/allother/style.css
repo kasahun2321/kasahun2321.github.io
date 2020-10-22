@@ -1,0 +1,54 @@
+#main {
+  max-width: 1024px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:blue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+span#info{
+    border: 2px red;
+    padding: 10px 5px;
+    margin-left: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  caption{
+      padding: 10px;
+      font-weight: bold;
+  }

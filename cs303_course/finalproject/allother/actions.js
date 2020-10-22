@@ -1,16 +1,11 @@
 /*eslint-disable*/
 
-function clearOut() {
-   let student = library.students.get(document.getElementById("student_name").value);
+function returnBook() {
+    let student = library.students.get(document.getElementById("student_name").value);
     let book = library.librarybooks.get(document.getElementById("book_title").value);
-    if(book === undefined){
-        alert("You can't do this operation this time first checkout book ")
-    }else{
-        student.returnBook(book);
-        displayInfo();
-   }
-  }
-  
+    student.returnBook(book);
+    displayInfo();
+}
 
 function returnAllBooks() {
     let student = library.students.get(document.getElementById("student_name").value);
@@ -22,7 +17,7 @@ function returnAllBooks() {
 function add(event) {
     let book = library.librarybooks.get(event.target.parentNode.value);
     checkOut(book);
-    
+    displayInfo();
 }
 
 function updateBooksOut(book) {
@@ -44,58 +39,18 @@ let currentStudent;
 
 function pullInfo() {
     let student = library.students.get(document.getElementById("student_name").value);
-    if(student === undefined){
-        alert("Please enter your first name")
-    }  
     if (!student) {
-        console.log("Not found");
+       Alert(" user Not found");
         return;
     }
     currentStudent = student;
-    displayInfoPull();
-}
-function returnBookToLibrary() {
-    let student = library.students.get(document.getElementById("student_name").value);
-    let book = library.librarybooks.get(document.getElementById("book_title").value);
-    if(book === undefined){
-        alert("You don't have anything to return checkout first");
-    }else{
-        displayInfoReturn();
-    }
-       
-}
-function chekOutBook() {
     displayInfo();
 }
-function displayInfoPull() {
-    clearAllBooks();
-    let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
-    document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
 
-}
 function displayInfo() {
     clearAllBooks();
     let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
-    //document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
-    if (currentStudent.libraryCard.booksOut.length > 0) {
-        for (let book of currentStudent.libraryCard.booksOut) {
-            let table = document.getElementById("booksOut");
-            let row = document.createElement("tr");
-            let td1 = document.createElement("td");
-            td1.innerHTML = book.name;
-            let td2 = document.createElement("td");
-            let td3 = document.createElement("td");
-            td3.innerHTML = book.dueDate;
-            row.append(td1);
-            row.append(td2);
-            row.append(td3);
-            table.append(row);
-        }
-    }
-}
-function displayInfoReturn() {
-    clearAllBooks();
-    let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
+    document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
     if (currentStudent.libraryCard.booksOut.length > 0) {
         for (let book of currentStudent.libraryCard.booksOut) {
             let table = document.getElementById("booksOut");
@@ -105,8 +60,10 @@ function displayInfoReturn() {
             let td2 = document.createElement("td");
             td2.innerHTML = book.overDueFee();
             let td3 = document.createElement("td");
+            td3.innerHTML = book.dueDate;
             row.append(td1);
             row.append(td2);
+            row.append(td3);
             table.append(row);
         }
     }
@@ -114,7 +71,7 @@ function displayInfoReturn() {
 
 function checkOut(book) {
     if (!currentStudent) {
-        alert("Please enter your name and click on Pull Info button.")
+        alert("Please select a student first.")
         return;
     }
     let books_before_checkout = currentStudent.libraryCard.booksOut;
