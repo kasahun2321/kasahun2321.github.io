@@ -12,20 +12,10 @@
     <fieldset>
         <legend><center><h1>Simple Library Mangment System</h1></center></legend><hr><hr>
         <div id="main">
-            <label><h3>Please Select User :</h3></label> 
-            <!-- <input type="text" id="student_name"/> -->
-            <select name="" id="student_name" class="combo">
-                <option value="select user .....">select User....</option>
-                <option value="Aman">Aman</option>
-                <option value="Kasahun">Kasahun</option>
-                <option value="Hamid">Hamid</option>
-                <option value="Guta">Guta</option>
-                <option value="Dani">Dani</option>
-                <option value="Yeshi">Yeshi</option>
-                <option value="Gete">Gete</option>
-                <option value="Dibora">Dibora</option>
-            </select>
+            <label>Please enter your name:</label> 
+            <input type="text" id="student_name"/>
             <button onclick="pullInfo()">Pull Info</button><span id="info">Enter your name and click Pull Info button</span><br/>
+           
             <button onclick="add(event)" value="javascript and jquery by JON DUCKETT">
                 <img src="http://javascriptbook.com/press/library/jpgs/javascript-book-cover.jpg" width="200"
                     height="200" /></button>
@@ -34,8 +24,8 @@
                     width="200" height="200" /></button>
             <button onclick="add(event)" value="Programing fundametals in JS">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/51riaGndv3L._SY346_.jpg" width="200"
-                    height="200"></button>            
-            
+                    height="200"></button>  <br/>          
+                    <button onclick="chekOutBook()">Check Out Book</button><span id="info"></span><br/>
             <input type="text" id="book_title"/>
             
     </fieldset>
@@ -44,10 +34,10 @@
         <table id="booksOut">
             <caption>Books Checked Out</caption>
             <tr><th>Book</th><th>Fee</th><th>DueDate</th></tr>
-        </table>
-
-        <button onclick="returnBook()">Return Book</button>
+        </table><br/>
         <button id="btn-reset" onclick="clearAllBooks()">Reset</button>
+        <button onclick="returnBookToLibrary()">return Book To Library</button>
+        <button onclick="clearOut()">Click here to clearOut book </button>
 
     </fieldset>
     </div>

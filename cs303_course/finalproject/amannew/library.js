@@ -2,6 +2,7 @@
 /*eslint-disable*/
 class ApplicationError extends Error { };
 
+
 class Student {
     constructor(name, libraryCard) {
         this._name = name;
@@ -57,7 +58,7 @@ class Book {
         this.name = name;
         this.author = author;
         this.calcDueDate = function () {
-            
+            //let numWeeks = 1;
             let now = new Date();
             now.setDate(now.getDate() - 7)
             return now;
@@ -122,15 +123,3 @@ const students = new Map();
 students.set("Aman", new Student("Aman", new LibraryCard()));
 const library = new Library(libraryBooks, students);
 library.addStudent(new Student("Kasahun", new LibraryCard()));
-const library2 = new Library(libraryBooks, students);
-library2.addStudent(new Student("Hamid", new LibraryCard()));
-const library3 = new Library(libraryBooks, students);
-library3.addStudent(new Student("Guta", new LibraryCard()));
-const library4 = new Library(libraryBooks, students);
-library4.addStudent(new Student("Dani", new LibraryCard()));
-const library5 = new Library(libraryBooks, students);
-library2.addStudent(new Student("Yeshi", new LibraryCard()));
-const library6 = new Library(libraryBooks, students);
-library3.addStudent(new Student("Gete", new LibraryCard()));
-const library7 = new Library(libraryBooks, students);
-library4.addStudent(new Student("Dibora", new LibraryCard()));

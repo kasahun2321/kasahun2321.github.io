@@ -6,6 +6,12 @@ function returnBook() {
     student.returnBook(book);
     displayInfo();
 }
+function clearOut() {
+    let student = library.students.get(document.getElementById("student_name").value);
+    let book = library.librarybooks.get(document.getElementById("book_title").value);
+    student.returnBook(book);
+    displayInfo();
+}
 
 function returnAllBooks() {
     let student = library.students.get(document.getElementById("student_name").value);
@@ -17,7 +23,7 @@ function returnAllBooks() {
 function add(event) {
     let book = library.librarybooks.get(event.target.parentNode.value);
     checkOut(book);
-    displayInfo();
+    // displayInfo();
 }
 
 function updateBooksOut(book) {
@@ -40,12 +46,25 @@ let currentStudent;
 function pullInfo() {
     let student = library.students.get(document.getElementById("student_name").value);
     if (!student) {
-       Alert(" user Not found");
+        console.log("Not found");
         return;
     }
     currentStudent = student;
+    displayInfoPull();
+}
+function returnBookToLibrary() {
+       displayInfoReturn();
+}
+function chekOutBook() {
     displayInfo();
 }
+function displayInfoPull() {
+    clearAllBooks();
+    let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
+    document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
+
+}
+
 
 function displayInfo() {
     clearAllBooks();
@@ -58,12 +77,31 @@ function displayInfo() {
             let td1 = document.createElement("td");
             td1.innerHTML = book.name;
             let td2 = document.createElement("td");
-            td2.innerHTML = book.overDueFee();
+            //  td2.innerHTML = book.overDueFee();
             let td3 = document.createElement("td");
             td3.innerHTML = book.dueDate;
             row.append(td1);
             row.append(td2);
             row.append(td3);
+            table.append(row);
+        }
+    }
+}
+function displayInfoReturn() {
+    clearAllBooks();
+    let books = currentStudent.libraryCard.booksOut.map(obj => obj.name);
+    //document.getElementById("info").innerHTML = `Hi ${currentStudent.name}, your current books are: ${books}`;
+    if (currentStudent.libraryCard.booksOut.length > 0) {
+        for (let book of currentStudent.libraryCard.booksOut) {
+            let table = document.getElementById("booksOut");
+            let row = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerHTML = book.name;
+            let td2 = document.createElement("td");
+            td2.innerHTML = book.overDueFee();
+            let td3 = document.createElement("td");
+            row.append(td1);
+            row.append(td2);
             table.append(row);
         }
     }
