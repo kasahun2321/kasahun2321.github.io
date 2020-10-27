@@ -1,0 +1,42 @@
+body{
+	background-color:black;
+}
+#org
+{
+	background-color:red;
+	margin:40px auto;
+	height:600px;
+}
+form{
+	 margin-left:120px;
+	 margin-right:120px;
+	 height:600px;
+	 background-color:white;
+}
+ul{
+	margin-top:20px;
+}
+ul li 
+{
+	margin-top:20px;
+	 font-family:45;
+	 background-color:pink;
+	 margin:0px;
+	 list-style:none;
+	 width:300px;
+}
+
+ol li 
+{
+	 font-family:45;
+	 	 margin:0px;
+	 list-style:none;
+	 
+}
+#abc
+{
+	margin-left:120px;
+}
+
+
+

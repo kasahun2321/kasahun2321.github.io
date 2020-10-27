@@ -1,0 +1,63 @@
+
+#login {
+    background: rgba(255,255,255,0.9);
+	margin-left: 10px;
+  padding: 5px 10px;
+    margin: 50px;
+    padding: 1px 50px 50px 50px;
+}
+#login{
+    padding-left: 37%;
+}
+#login p{
+   font-size: 2em;
+   text-transform: uppercase;
+   padding-left: 70px;
+}
+#login input {
+    padding: 10px 40px;
+    margin-bottom: 10px;
+}
+#login .btn1{
+    padding: 10px 102px;
+    background-color: #4caf50;
+    text-decoration: none;
+    color: #fff;
+}
+#login .btn1:hover{
+    background-color: #fff;
+    text-decoration: none;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+#register {
+    background: rgba(255,255,255,0.9);
+    margin: 50px;
+    padding: 1px 50px 50px 50px;
+}
+#register {
+    padding-left: 37%;
+}
+#register p{
+   font-size: 2em;
+   text-transform: uppercase;
+   padding-left: 45px;
+}
+#register input {
+    padding: 10px 40px;
+    margin-bottom: 10px;
+}
+#register .btn2{
+    padding: 10px 92px;
+    background-color: #6699ff;
+    color: #fff;
+    text-decoration: none;
+}
+#register .btn2:hover{
+    background-color: #fff;
+    color: #6699ff;
+    text-decoration: none;
+    border: 1px solid #6699ff;
+}
+

@@ -1,0 +1,189 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	height:auto;
+}
+
+
+body{
+	background-color:gray;
+	text-align:center;
+}
+
+#wrapper{ 
+margin:10px auto;
+width:1200px;
+background:#B5FFFC;
+min-height: 100%;
+text-align:left;
+}
+#header{
+	background-color: skyblue;
+	
+	
+}
+#img1
+{
+	display:inline;
+	padding:5px 2px 10px 10px;
+	vertical-align:middle;
+}
+#hh1
+{
+	display:inline;
+}
+
+ 
+#navigation ul
+
+{
+
+	list-style: none;
+	text-decoration:none;
+}
+
+#navigation ul li a {
+	color:black;
+	text-decoration:none;
+	font-size:25px;
+	
+	
+}
+#navigation ul li{
+	background-color: white;
+	width: 169.4px;border: 1px solid white;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	color: white;
+	font-size: 18px;
+	
+}
+
+#navigation ul li:hover
+{
+	background-color: pink;
+}
+#navigation ul ul{
+	display: none;
+}
+#navigation ul li:hover > ul{
+	display:block;
+}
+ 
+
+#slider1{
+	margin-top:20%;
+	height:50px;
+	width:auto;
+	display:inline;
+	
+}
+#sidebar{
+	background-repeat:no-repeat;
+	background-image:url("funny jump.png");
+	background-size:cover;
+	margin-left:0px;
+	margin-top:0px;
+	//border-radius:5px;
+	// left:800px;
+	//top:90px;
+	width:350px;
+	//background:lightblue;
+	//text-align:center;
+	min-height:800px;
+	float:right;
+	//border:5px solid white;
+  	
+}
+
+#content{
+	display:inline;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-image:url("green.png" );
+	background-size:cover;
+	//background-size:100%;
+	//margin-top:10px; 
+	//margin-left:10px;
+	color:black;
+	min-height:800;
+background:#CCCCFF;
+width:845px;
+//border-radius:5px;
+//padding-left:5px;
+float:left;
+
+}
+#pp{
+	text-align:left;
+	padding-left:10px ;
+	padding-right:10px auto;
+	padding-top:10px ;
+	font-family:45px;
+	
+	
+}
+
+#www{
+	width:350px;
+	height:300px;
+	//position:active;
+	margin-top:25%;
+	margin-left:30%;
+	
+}
+
+#footer ul
+{
+	
+	margin:0px ;
+	padding:0px;
+	
+}
+#footer ul li 
+{
+	list-style:none;
+	background-color:#9999FF;
+	border:1px solid white;
+	width:296px;
+	color:black;
+	height:25px;
+	float:left;
+	line-height:25px;
+	//margin:1px auto;
+	text-align:center;
+	font-size:25px;
+	text-decoration:none;
+}
+#kk
+{
+	margin-right:200px;
+}
+#lll{
+	margin:80px;
+}
+#mm
+{
+	margin:80px;
+}
+.img{
+	margin:2px;
+	delibrateblocked border:1px  solid #0000ff;
+    height:auto;
+	width:auto;
+	float:left;
+	text-align:center;
+}
+.img img
+{
+display:inline;
+margin:3px;
+border:1px solid #ffffff;	
+}
+
+#copy{
+	text-align:center;
+}

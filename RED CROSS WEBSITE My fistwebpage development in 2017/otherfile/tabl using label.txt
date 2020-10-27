@@ -1,0 +1,112 @@
+<table border="3">
+<tr>
+
+<th COLSPAN ="1"></th>
+
+<th COLSPAN ="5"> DONAR DETAIL </th>
+</tr>
+
+<tr>
+<TH>ORDER</TH>
+<th>NAME</th>
+<th>ID NO</th>
+<th>CONTACT</th>
+<th>ADDRESS</th>
+<th>BLOOD-TYPE</th>
+<th> NO OF DONATION</th>
+</tr>
+<tr>
+<TH>1</TH>
+<td> ABDU</td>
+<td>23</td>
+<td>0922</td>
+<td>HARAR</td>
+<td>A</td>
+<td>1</td>
+</tr>
+
+<tr>
+<TH>2</TH>
+<td>GONFA</td>
+<td>14</td>
+<td>09224</td>
+<td>A.A</td>
+<td>B</td>
+<td>2</td>
+</tr>
+<tr>
+<td>club news</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+<tr>
+<td>press news</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+<tr>
+<td>fan news</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>squed info</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+<tr>
+<td>setadiuem info</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+<tr>
+<td>photo gallery</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+<tr>
+<td>league feuture</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+
+<tr>
+<td>club history</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+
+<tr>
+<td>site map</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>n/A</td>
+<td>x</td>
+</tr>
+
+</table>

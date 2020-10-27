@@ -1,0 +1,250 @@
+body{
+	background: url('kal/cone.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-family: "Microsoft JhengHei Light", Georgia, Serif;
+	text-align:center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    font-family: "Microsoft JhengHei Light", Georgia, Serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+p {
+    font-size: .85em;
+    line-height: 1.6;
+    color: #000;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999;
+} 
+#b3{
+float:left;
+width:350px;
+margin:40px;
+padding:5px;
+border:1px solid black;
+
+}
+#main{
+border:1px solid blue;
+-webkit-box-flex:1;
+margin: 20px;
+padding:20px
+-webkit-box-align:center;
+-webkit-border-radius:25px;
+-webkit-box-shadow:rgb(110,110,110) 8px 8px;
+background:-webkit-linear-gradient:(top,black,white);
+   }
+#b3 img{
+width:340px;
+}
+   .box2 .health{
+   	display: inline-block;
+   }
+   #box-cont-2 {
+    padding: 0px 0px 0px 0px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+     }
+
+#heade{
+display:block;
+}
+.b2.health{
+float:left;
+}
+
+/*Navbar  ****************************/
+.heading{
+	color: rgba(0,0,0,0.5);
+  font-family: "Segoe UI Black", Georgia, Serif;
+  text-transform: none;
+}
+#nav{
+	background-color: #ffffff;
+	margin-bottom: 50px;
+}
+#nav_wrapper{
+	width: auto;
+	margin: 0 auto;
+	text-align: right;
+}
+#nav ul{
+	list-style-type: none;
+	padding: 0 70px 0 0;
+	margin: 0;
+	position: relative;
+	text-align: center;
+}
+
+
+#nav li .search{
+	margin-left: 50px;
+	padding: 5px 10px;
+	background-color: #ffffff;
+	color: #4caf50;
+}
+#nav li .search:hover{
+	margin-left: 50px;
+	padding: 5px 10px;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+#nav li button{
+	padding: 5px 10px;
+	background-color: rgba(0,0,0,0.05);
+}
+#nav ul li{
+	display: inline-block;
+}
+#nav ul .login{
+	color: #fff;
+	float: right;
+	background-color: #b3d5ac;
+}
+#nav ul .login:hover{
+	background-color: #4caf50 ;
+}
+#nav ul li .row:hover{
+	background-color: #ffffff; 
+	text-align: left;
+
+}
+#nav ul li .row{
+	text-align: left;
+}	
+
+#nav ul li a,visted{
+	color: #4caf50;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+}
+#nav ul li a:hover{
+    color: #000;
+    background-color: rgba(0,0,0,0.05);
+    text-decoration: none;
+}
+
+#nav ul li:hover ul{
+	display: block;
+}
+
+#nav ul ul{
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 100px;
+}
+#nav ul ul li{
+	display: block;
+}
+#nav ul ul li a,visited{
+	color: #4caf50;
+}
+#nav ul ul li a:hover{
+	color: #222; 
+}
+#nav ul li a{
+	color: #555;
+}
+
+
+/*First Box***********************************/
+img{
+width:400px;
+height:350;
+}
+h2,h4,h5{
+text-align:center;
+}
+
+#tuna {
+color:green;
+font-family: "Microsoft JhengHei Light", Georgia, Serif;
+background:white;
+border:solid;
+border-color:blue;
+
+
+padding:90px 30px:
+
+}
+#buy{
+color:blue;
+font-family: "Microsoft JhengHei Light", Georgia, Serif;
+background:white;
+padding:20px 90px;
+
+border-color:green;
+}
+ #kale{
+   width: 85px;
+      height: 85px;
+      padding: 10px;
+	  margin:30 10 10px 10px;
+      box-shadow: 0px 0px 30px #555555;
+	  }
+/*third Box**********************************/  
+   
+  
+   .box4{
+   	 margin: 70px 70px 60px 70px;
+   	 background: rgba(255,255,255,0.9);
+   	 padding: 5px 0px 0px 20px; 
+   	}
+   	.box4 .health-studies{
+   		display: inline-block;
+   	}
+   	#box-cont-4 img{
+   		width: 470px;
+   		height: 300px;
+   		padding: 10px;
+   		box-shadow: 0px 0px 30px #555555;
+   	}
+    .health-studies .h3s{
+    	width: 720px;
+    	height: auto;
+    	padding: 20px;
+    }   	
+
+
+
+/*Footer*************************************/ 
+
+footer {
+    background: #fff;
+    margin: 0px 50px 0px 50px;
+    background: rgba(255,255,255,0.9);
+}
+
+footer p {
+    margin: 0px;
+    text-align: center;
+    padding: 50px;
+}
+
+#box-cont10 img{
+width:1200px;
+height : 450px;
+padding: 0px 5px 0px 5 px;
+box-shadow: 0px 0px 30px #999999;
+
+}
+#box-cont10 p {
+padding : 25px;
+text-align: center;
+font-size: 15px;
+}
+
+

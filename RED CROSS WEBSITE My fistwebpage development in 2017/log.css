@@ -1,0 +1,82 @@
+
+
+body
+{
+	
+	background-color:gray;
+	
+}
+.container
+{
+	position:fixed;
+	margin:0px auto;
+	margin-top:0px;
+//background-color:green;
+width:1250px;;
+min-height:100%;
+	//background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-image:url("log.png" );
+
+}
+#inside
+{
+	
+	background-color:white;
+	margin-left:40%;
+	margin-top:10%;
+	width:310px;
+	height:400px;
+	padding-left:20px;
+	padding-top:20px;
+	border:20px solid black;
+	
+}
+#inside input[ type= "text"]
+{
+width:20px;
+height:25px;
+border:0px;
+}
+#pp{
+	
+	font-size:40px;
+}
+*{
+	//margin-left:10px ;
+	padding: 0px;
+}
+#navigation ul
+{
+	list-style: none;
+}
+#navigation ul li{
+	background-color: black;
+	width: 206px;
+	border: 1px solid white;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	color: white;
+	font-size: 18px;
+}
+
+#navigation ul li:hover
+{
+	background-color: pink;
+}
+#navigation ul ul{
+	display: none;
+}
+#navigation ul li:hover > ul{
+	display:block;
+}
+
+#navigation ul li a {
+	color:white;
+	text-decoration:none;
+	font-size:25px;
+	
+	
+}

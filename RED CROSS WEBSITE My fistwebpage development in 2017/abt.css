@@ -1,0 +1,47 @@
+body
+{
+	background-color:gray;
+}
+#ddd
+{
+	background-color:white;
+	width:1200px;
+margin:0px auto;
+	
+}
+#abt
+{
+margin:20px auto;
+
+}
+#img1
+{
+	margin-left:20%;
+	
+}
+h1
+{
+	display:inline;
+	font-size:35px;
+	font-family:times new romans;
+	text-align:center;
+}
+#bbc
+{
+
+background-color:red;
+	font-size:30px;
+	height:100px;
+	
+}
+#bc{
+	 margin-left:10%;
+	 margin-right:5%;
+	 //background-color:white;
+}
+#bc ul li {
+	
+	 font-size:20px;
+	
+	 
+}

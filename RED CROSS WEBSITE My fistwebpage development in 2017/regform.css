@@ -1,0 +1,111 @@
+*
+{
+	margin-left:0px;
+	margin-top=0px;
+}
+body {
+	margin:5px auto;
+	text-align:center;
+	background-color:gray;
+	
+}
+#marker
+{
+	background-repeat:no-repeat;
+	background-image:url("funny jump.png");
+	background-size:cover;
+	margin-left:0px;
+	margin-top:0px;
+	//border-radius:5px;
+	// left:800px;
+	//top:90px;
+	width:960px;
+	//background:lightblue;
+	//text-align:center;
+	min-height:19px;
+	float:left;
+	//border:5px solid white;
+}
+
+#sidebar{
+	background-repeat:no-repeat;
+	background-image:url("funny jump.png");
+	background-size:cover;
+	margin-left:5px;
+	margin-top:0px;
+	//border-radius:5px;
+	// left:800px;
+	//top:90px;
+	width:500px;
+	//background:lightblue;
+	//text-align:center;
+	min-height:535px;
+	float:left;
+	//border:5px solid white;
+  	
+}
+#both{
+	text-align:bottom;
+}
+#form1{
+	text-align:left;
+	margin:0px auto;
+
+	width:960;
+	height:100%;
+background-color:skyblue;
+	//background-image:url("nmn.png");
+	background-size:cover;
+	
+	
+	}
+	
+	p{
+		
+		text-align:center;
+		color:black;
+	}
+	h1{
+		margin-top:20px;
+		text-align:center;
+		color:black;
+		font-family:times new roman;
+		font-style:armenian;
+		font-size:30px;
+	}
+ 
+
+ 
+#footer{
+	//display:inline;
+	margin-left:0px;
+	margin-top:120px;
+	min-height:42px;
+	background:black;
+	font-size:25px;
+	//color: white;
+	//text-align:center;
+	
+}
+
+ ul li{
+	
+list-style-type:none;
+color:red;
+//background:white;
+display:inline;
+text-decoration:none;
+}
+footer a {
+color:white;	
+}
+#footer li{
+display:inline;
+padding:10px;
+}
+#footer ul li  :hover{
+	background-color:PINK;
+	widows:100%;
+	height:100%;
+}
+
