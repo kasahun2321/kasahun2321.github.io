@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="vowellettercounter.exe" version="1.0.0.5" publicKeyToken="2e26f29c5797a989" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="vowellettercounter" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="vowellettercounter.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vowellettercounter.exe" size="1895936">
+      <assemblyIdentity name="vowellettercounter" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oMdccVa1fLoZ4Fx9dryghLsUO14=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=KASESHPC\tefera" issuerKeyHash="9635ab22b020fa1d9492fd0bc95e33b049a89403" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>waPfNk/kqugTlSKhA1L+9+Aqy5k=</DigestValue></Reference></SignedInfo><SignatureValue>nPMOoZZto7BHc0Z4hFA2Rj4PnQBSTRAW3o4qbq2lpFqfuJD7yeusmJULSyXr9fJE1eXuEUkaOEnaULVp97NPDLQ0dASUhfYm69BzEoO8iJd1CZAprqSLJDACcFCx+S6h/EfdtpqJvitS0c480pTl6BMPcEbNZxeYdTTuLwrkf8Y=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>32OOoNEIIY+XEE4dztz3UHYAGdd1t+eVoY33LMnJYRsvmiOZLzBUIp9jis0MuiUFL/WvaaBySws+AOvz9Kpgr+OZ2ZGqEelh08JaghnEZun1Ii1XlxYJTBNWmuu7Yh0rm+kSSlrB3VFj6TK4Rw1YtnLhBo8L4KdvzOEakCqFsmE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="99cb2ae0f7fe5203a1229513e8aae44f36dfa3c1" Description="" Url=""><as:assemblyIdentity name="vowellettercounter.exe" version="1.0.0.5" publicKeyToken="2e26f29c5797a989" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KASESHPC\tefera</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>RDjxbNWYRLXjKVX4pHOvksooiMc=</DigestValue></Reference></SignedInfo><SignatureValue>jSPdTIhitQG8kazcxylOB/1f0suXmvIwDkkI2ikThk4S3Uk5BSvvxfbudOR3aX6Qv5+iGSqXy9OK5MNnpWnSYjANBOiNUdMlCcqm9mQG6xvvM/yaBHz9JO0WADzEvl7DKOe1KFA/XmrJSGtNDNCvGf9T1Kjrx10tfSDFrahauvU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>32OOoNEIIY+XEE4dztz3UHYAGdd1t+eVoY33LMnJYRsvmiOZLzBUIp9jis0MuiUFL/WvaaBySws+AOvz9Kpgr+OZ2ZGqEelh08JaghnEZun1Ii1XlxYJTBNWmuu7Yh0rm+kSSlrB3VFj6TK4Rw1YtnLhBo8L4KdvzOEakCqFsmE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQZ4ITIdqf5blFErQsEUlL6zANBgkqhkiG9w0BAQUFADApMScwJQYDVQQDHh4ASwBBAFMARQBTAEgAUABDAFwAdABlAGYAZQByAGEwHhcNMTYxMjI5MDEwNjE1WhcNMTcxMjI5MDcwNjE1WjApMScwJQYDVQQDHh4ASwBBAFMARQBTAEgAUABDAFwAdABlAGYAZQByAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAN9jjqDRCCGPlxBOHc7c91B2ABnXdbfnlaGN9yzJyWEbL5ojmS8wVCKfY4rNDLolBS/1r2mgcksLPgDr8/SqYK/jmdmRqhHpYdPCWoIZxGbp9SItV5cWCUwTVprru2IdK5vpEkpawd1RY+kyuEcNWLZy4QaPC+Cnb8zhGpAqhbJhAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAA/G8A4/VBrSeoyvH/yl0SJ4UyyTcO0+uyPODBOBP57Ed7s3I8VZ6Hrf0COJVsuqueoJLrd1Gde8Nx36omOtDh0x0NhN4jxiBmrGSZ7uEKLzLI+JOIblS1fOItrP2eNiknvX7D2V213j7h8KEuosypM88Xq9lvkHxNplnh/W5i70=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
