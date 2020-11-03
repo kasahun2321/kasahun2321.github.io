@@ -6,13 +6,13 @@ function sum(t){
 }
 
 function sumHelper(t,p){
-    //  let sum=p
+   
 
     if(t.isExternal(p)){
         return 0;
     }
     else{
-        sum=p.element()
+       let  sum=p.element()
         let left=sumHelper(t,t.leftChild(p));
         let right=sumHelper(t,t.rightChild(p));
         //return sum + left.element() + right.element();

@@ -1,6 +1,0 @@
-
-
-function sum(T)
-{
-    
-}
