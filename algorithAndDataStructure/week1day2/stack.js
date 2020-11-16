@@ -17,6 +17,14 @@ class stack {
     isEmpty() {
         return this._str.isEmpty();
     }
+    top()
+    {
+        return this._str.top();
+    }
+    size()
+    {
+        this._str.size()
+    }
     
 }
 

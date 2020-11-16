@@ -50,19 +50,3 @@ printer.print(t0);
 
 console.log("the sum is ",sum(t0));
 }
-///hung soln
-
-// function sum(t){​​​​​
-//     return sumHelper(t, t.root());
-//     }​​​​​
-//     function sumHelper(t, p){​​​​​
-//     if(t.isExternal(p)){​​​​​
-//     return 0;
-//     }​​​​​ else {​​​​​
-//     let sum = p.element();
-//     let lsum = sumHelper(t, t.leftChild(p));
-//     let rsum = sumHelper(t, t.rightChild(p));
-//     return lsum + rsum + sum;
-//     }​​​​​
-//     }​​​​​
-//     console.log(sum(t0));

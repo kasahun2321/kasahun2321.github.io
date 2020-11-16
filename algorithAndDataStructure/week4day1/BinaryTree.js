@@ -1,5 +1,5 @@
 class TPos {
-    constructor(elem, parent, left, right) {
+    constructor(left, elem, right, parent) {
         this._parent = parent;
         this._left = left;
         this._right = right;
@@ -53,7 +53,9 @@ class BinaryTree {
         return (p != null);
     }
     replaceElement(p, e) {
+        let oldElem = p._elem;
         p._elem = e;
+        return oldElem;
     }
     swapElements(p, q) {
         let temp = p._elem;
@@ -64,7 +66,7 @@ class BinaryTree {
         if (this._size > 0) {
             throw new Error("Invalid insertRoot(e) to non-empty tree");
         }
-        this._root = new TPos(e, null, null, null);
+        this._root = new TPos(null, e, null, null);
         this._size++;
         return this._root;
     }
@@ -72,7 +74,7 @@ class BinaryTree {
         if (this.isExternal(p) || this.isInternal(p._left)) {
             throw new Error("Invalid insertLeft(p,e) operation");
         }
-        let newLeft = new TPos(e, p, null, null);
+        let newLeft = new TPos(null, e, null, p);
         p._left = newLeft;
         this._size++;
         return newLeft;
@@ -81,7 +83,7 @@ class BinaryTree {
         if (this.isExternal(p) || this.isInternal(p._right)) {
             throw new Error("Invalid insertRight(p,e) operation");
         }
-        let newRight = new TPos(e, p, null, null);
+        let newRight = new TPos(null, e, null, p);
         p._right = newRight;
         this._size++;
         return newRight;
@@ -91,95 +93,32 @@ class BinaryTree {
             throw new Error("Invalid remove(p): p is not internal");
         }
         let parent = p._parent;
-        let child = null;
+        let remainingChild = null;
         if (this.isExternal(p._left)) {
-            child = p._right;
+            remainingChild = p._right;  // remainingChild stays in tree
         } else if (this.isExternal(p._right)) {
-            child = p._left;
+            remainingChild = p._left;   // remainingChild stays in tree
         } else {
             throw new Error("Invalid remove(p): both children are internal");
         }
         if (this.isRoot(p)) {
-            this._root = child;
-            child._parent = null;
+            this._root = remainingChild;  // remainingChild stays in tree
+            if (this.isInternal(remainingChild)) {  // could be an empty tree after remove
+                remainingChild._parent = null;
+            }
         } else {
             if (this._isLeftChild(p)) {
-                parent._left = child;
+                parent._left = remainingChild;  // remainingChild stays in tree
             } else {
-                parent._right = child;
+                parent._right = remainingChild;  // remainingChild stays in tree
             }
-            if (this.isInternal(child)) {
-                child._parent = parent;
+            if (this.isInternal(remainingChild)) {
+                remainingChild._parent = parent;
             }
         }
         this._size--;
-        return child;
+        return remainingChild;  // remainingChild stays in tree
     }
 }
 
-class EulerTour {
-    visitExternal(p, result) { }
-    visitPreOrder(p, result) { }
-    visitInOrder(p, result) { }
-    visitPostOrder(p, result) { }
-    eulerTour(T, p) {
-        let result = new Array(3);
-        if (T.isExternal(p)) {
-            this.visitExternal(T, p, result);
-        } else {
-            this.visitPreOrder(T, p, result);
-            result[0] = this.eulerTour(T, T.leftChild(p));
-            this.visitInOrder(T, p, result);
-            result[2] = this.eulerTour(T, T.rightChild(p));
-            this.visitPostOrder(T, p, result);
-        }
-        return result[1];
-    }
-}
-class Print extends EulerTour {
-    visitExternal(T, v, result) {
-        result[1] = "";
-    }
-    visitPostOrder(T, v, result) {
-        result[1] = "(" + result[0] + v.element() + result[2] +")";
-    }
-    print(T) {
-        if (T.size() > 0) {
-            console.log("Root="+T.root().element());
-        }
-        let res = this.eulerTour(T, T.root());
-        console.log("[" + res + "]\n");
-    }
-}
-
-
-
-var t0 = new BinaryTree();
-
-var printer = new Print();
-
-printer.print(t0);
-
-let r = t0.insertRoot(300);
-printer.print(t0);
-
-let l1 = t0.insertLeft(r, 200);
-let r1 = t0.insertRight(r, 400);
-printer.print(t0);
-t0.insertRight(l1, 250);
-l1 = t0.insertLeft(l1, 100);
-t0.insertRight(l1, 150);
-l1 = t0.insertLeft(l1, 50);
-l1 = t0.insertLeft(r1, 350);
-r1 = t0.insertRight(r1, 500);
-t0.insertLeft(r1, 450);
-r1 = t0.insertRight(r1, 600);
-t0.insertLeft(r1, 550);
-r1 = t0.insertRight(r1, 800);
-printer.print(t0);
-t0.insertLeft(r1, 700);
-printer.print(t0);
-console.log("the size of the tree",t0.size())
-document.write("the size of the array ", t0.size())
-
-
+exports.BinaryTree = BinaryTree;

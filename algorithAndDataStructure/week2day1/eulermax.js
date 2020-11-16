@@ -1,4 +1,4 @@
-class Max extends eulerTour {
+class Max extends EulerTour {
     visitExternal(T, p, r){
         r[1] = -Infinity
     }
