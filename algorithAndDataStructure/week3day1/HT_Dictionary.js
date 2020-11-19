@@ -304,7 +304,7 @@ function findWinners(dat) {
  
         if(count > max){
             max = count;
-           winners =[];
+            winners =[];
             winners.push(keys);
         }
     }
