@@ -87,10 +87,10 @@ window.onload = function () {
           #playground
           {
             text-align: center;
-            background-image: url("./g3.gif");
+            background-image: url("./g33.gif");
             background-repeat: no-repeat;
             background-size: cover;
-            color:white;
+            color:black;
             position: relative;
             font-weight: bold;
           }
@@ -106,11 +106,9 @@ window.onload = function () {
      */
     window.addEventListener('popstate', function (event) {
         if (event.state.page === 1) {
-           //ye saate negere saat atefa ale
             clearInterval(TimerID)
             loginpage();
         } else {
-           //ye saate negere saat atefa ale
            clearInterval(TimerID)
             playingpage();
         }
@@ -144,7 +142,6 @@ window.onload = function () {
     }
 
     function reload() {
-        //ye saate negere saat atefa ale
         clearInterval(TimerID)
         getAnimation();
     }
