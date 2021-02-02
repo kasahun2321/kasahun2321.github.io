@@ -1,0 +1,22 @@
+.container
+{
+background-color:#6699FF
+
+}
+.bodydiv
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+h1{
+    color:white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(26, 211, 180);
+    color: white;
+  }

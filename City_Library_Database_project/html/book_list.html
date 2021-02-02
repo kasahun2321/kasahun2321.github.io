@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <!-- navigation bar  -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <h3>welcome to city Library <span class="sup">&reg;</span></h3>
+                    </a>
+                </li>
+                <h1>|</h1>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">
+                        <h4>About Us</h4>
+                    </a>
+                </li>
+                <h1>|</h1>
+                <li class="nav-item">
+                    <a class="nav-link" href="book_list.html">
+                        <h4>Books</h4>
+                    </a>
+                </li>
+                <h1>|</h1>
+                <li class="nav-item">
+                    <a class="nav-link" href="virtualtour.html">
+                        <h4>Virtual tour</h4>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">welcome,Guest </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+    <br>
+    <!-- wellcome mesaage  -->
+    <div class="bodydiv">
+        <div class="wellcome">
+            <div class="row">
+                <div class="text-left">
+                    <h3><a href="">Books in our collection <span class="sup">&reg;</a></span></h3>
+                </div>
+                <div class="text-right">
+                    <button type="button" class="btn btn btn-success fa-pull-right">Add Book</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!-- text content -->
+        <div class="contentpage">
+
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+
+                        <th>#</th>
+                        <th>ISBN</th>
+                        <th>Book Title</th>
+                        <th>Over due fee</th>
+                        <th>Publisher</th>
+                        <th>Date Published</th>
+
+                    </tr>
+
+
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+
+
+
+            </table>
+
+
+        </div>
+        <div class="fetchdata">
+            <script>
+                let data;
+                fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list").then(function (response) {
+                    response.json().then(function (data) {
+
+
+                        console.log(data);
+                        if (data.length > 0) {
+                            let temp = "";
+                            data.forEach(kas => {
+                                temp += "<tr>";
+                                temp += "<td>" + kas.bookId + "</td>";
+                                temp += "<td>" + kas.isbn + "</td>";
+                                temp += "<td>" + kas.title + "</td>";
+                                temp += "<td>" + kas.overdueFee + "</td>";
+                                temp += "<td>" + kas.publisher + "</td>";
+                                temp += "<td>" + kas.datePublished + "</td></tr>";
+
+                            })
+
+                            document.getElementById("data").innerHTML = temp;
+                        }
+
+
+                    });
+                });
+
+
+            </script>
+
+
+        </div>
+
+
+        <div class="footer">
+            <button class="btn btn-primary btn-block"> &copy;kasahun tehone ©febrary 2021</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
