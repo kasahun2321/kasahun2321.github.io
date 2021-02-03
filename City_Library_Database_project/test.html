@@ -13,5 +13,83 @@
 
 <body>
     <div id="myData"></div>
+
+
+    <!-- <div class="fetchdata">
+            <script>
+                let data;
+                fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list").then(function (response) {
+                    response.json().then(function (data) {
+
+
+                        console.log(data);
+                        if (data.length > 0) {
+                            let temp = "";
+                            let counter=1
+                            data.forEach(kas => {
+
+                                temp += "<tr>";
+                                temp += "<td>" + counter++ + "</td>";
+                                temp += "<td>" + kas.isbn + "</td>";
+                                temp += "<td>" + kas.title + "</td>";
+                                temp += "<td>" + kas.overdueFee + "</td>";
+                                temp += "<td>" + kas.publisher + "</td>";
+                                temp += "<td>" + kas.datePublished + "</td>";
+                                 temp += "<td>" +` <a onclick="edit()" class="btn btn-success">Edit</a>` + "</td>";
+                                 temp += "<td>" + `<button class="btn btn-danger" onclick="delete()">Delete</button>` + "</td></tr>";
+
+                            })
+
+                            document.getElementById("data").innerHTML = temp;
+                        }
+
+
+                    });
+                });
+
+
+            </script>
+
+
+        </div>
+
+
+        <div class="footer">
+            <button class="btn btn-primary btn-block"> &copy;kasahun tehone ©febrary 2021</button>
+        </div>
+    </div> -->
+
+<script>    
+    $('button[name="remove_levels"]').on('click', function(e) {
+       var $form = $(this).closest('form');
+       e.preventDefault();
+       $('#confirm').modal({
+           backdrop: 'static',
+           keyboard: false
+       })
+       .on('click', '#delete', function(e) {
+           $form.trigger('submit');
+         });
+       $("#cancel").on('click',function(e){
+        e.preventDefault();
+        $('#confirm').modal.model('hide');
+       });
+     });</script>
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.js"></script>
+<form action="#" method="POST">
+<button class='btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete"><span class="fa fa-times"></span> delete</button>
+</form>
+
+<div id="confirm" class="modal">
+<div class="modal-body">
+  Are you sure?
+</div>
+<div class="modal-footer">
+  <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+  <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+</div>
+</div>
   </body>
 </html> 

@@ -11,6 +11,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/fetchbooks.js"></script>
 
 </head>
 
@@ -47,7 +48,7 @@
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="#">welcome,Guest </a>
+            <a class="navbar-brand mx-auto" href="#"> welcome,Guest</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,19 +60,19 @@
     <div class="bodydiv">
         <div class="wellcome">
             <div class="row">
-                <div class="text-left">
-                    <h3><a href="">Books in our collection <span class="sup">&reg;</a></span></h3>
-                </div>
-                <div class="text-right">
-                    <button type="button" class="btn btn btn-success fa-pull-right">Add Book</button>
+                <div class="col-10"><h2 type="text" class="txt-success">Books in ourCollection</h2></div>
+                <div class="col-2">
+                    <!-- <input class="btn btn-success" type="submit" value="Add New Book"> -->
+                    <button class="btn btn-success" type="button"><a href="./add_new_book.html"><h6>Add New Book</h6></a></button>
                 </div>
             </div>
-            <hr>
         </div>
+        <hr>
         <!-- text content -->
         <div class="contentpage">
 
-            <table class="table table-striped">
+            <!-- <table class="table table-striped"> -->
+            <table class="table table-dark table-hover">
 
                 <thead>
                     <tr>
@@ -97,46 +98,7 @@
 
 
         </div>
-        <div class="fetchdata">
-            <script>
-                let data;
-                fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list").then(function (response) {
-                    response.json().then(function (data) {
-
-
-                        console.log(data);
-                        if (data.length > 0) {
-                            let temp = "";
-                            data.forEach(kas => {
-                                temp += "<tr>";
-                                temp += "<td>" + kas.bookId + "</td>";
-                                temp += "<td>" + kas.isbn + "</td>";
-                                temp += "<td>" + kas.title + "</td>";
-                                temp += "<td>" + kas.overdueFee + "</td>";
-                                temp += "<td>" + kas.publisher + "</td>";
-                                temp += "<td>" + kas.datePublished + "</td></tr>";
-
-                            })
-
-                            document.getElementById("data").innerHTML = temp;
-                        }
-
-
-                    });
-                });
-
-
-            </script>
-
-
         </div>
-
-
-        <div class="footer">
-            <button class="btn btn-primary btn-block"> &copy;kasahun tehone ©febrary 2021</button>
-        </div>
-    </div>
-
 
 </body>
 
