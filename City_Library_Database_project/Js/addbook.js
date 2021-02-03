@@ -14,9 +14,14 @@ wrapper.addEventListener('submit', (e) => {
     //     e.preventDefault();
 
     // }
- 
+});
+ function bookadd(){
     const url = 'https://elibraryrestapi.herokuapp.com/elibrary/api/book/add';
-   
+    let isbn = document.getElementById('isbn').value;
+    let title = document.getElementById('title').value;
+    let overdueFee = document.getElementById('fee').value;
+    let publisher = document.getElementById('publisher').value;
+    let date = document.getElementById("date").value;
     // post body data 
     const data = {
         "isbn": `${isbn}`,
@@ -37,4 +42,4 @@ wrapper.addEventListener('submit', (e) => {
         .then(res => res.json())
         .then(res => console.log(res));
 
-});
+}
