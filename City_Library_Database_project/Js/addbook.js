@@ -10,10 +10,10 @@ wrapper.addEventListener('submit', (e) => {
     if (isbn == '' || title == '' || date == '' || overdueFee == '' || publisher == '' || date == '') {
         message.push('requered filled are missing');
     }
-    if (message.length > 0) {
-        e.preventDefault();
+    // if (message.length > 0) {
+    //     e.preventDefault();
 
-    }
+    // }
  
     const url = 'https://elibraryrestapi.herokuapp.com/elibrary/api/book/add';
    
