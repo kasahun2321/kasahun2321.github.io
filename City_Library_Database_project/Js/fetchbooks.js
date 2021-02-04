@@ -18,7 +18,7 @@ fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list").then(funct
                 temp += "<td>" + kas.datePublished + "</td>";
 
                 //<a  href="edit.html?bookId=${kas.bookId}" class="btn btn-success">Edit</a>
-                temp += "<td>" + `<button onclick="editBookForm(${kas.bookId})">Edit</button> ` + "</td>";
+                temp += "<td>" + `<button class="btn btn-primary"onclick="editBookForm(${kas.bookId})">Edit</button> ` + "</td>";
                 temp += "<td>" + `<button class="btn btn-danger" onclick="deleter(${kas.bookId})">Delete</button>` + "</td></tr>";
 
             })
