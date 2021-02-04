@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+    <title>book list page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/fetchbooks.js" defer></script>
+    <script src="../Js/fetchbooks.js" defer></script>
+    <script defer src="../Js/editupdate.js"></script>
+
+
     <!-- <script src="../js/delete.js" async></script> -->
 
 </head>
@@ -23,7 +30,7 @@
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="../index.html">
                         <h3>welcome to city Library <span class="sup">&reg;</span></h3>
                     </a>
                 </li>
@@ -49,7 +56,8 @@
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="#"> welcome,Guest</a>
+            <a class="navbar-brand mx-auto" href="https://kasahun2321.github.io/kasahun2321.github.io/boot/index.html">
+                welcome,Guest</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,47 +67,89 @@
     <br>
     <!-- wellcome mesaage  -->
     <div class="bodydiv">
-        <div class="wellcome">
-            <div class="row">
-                <div class="col-10"><h2 type="text" class="txt-success">Books in ourCollection</h2></div>
-                <div class="col-2">
-                    <!-- <input class="btn btn-success" type="submit" value="Add New Book"> -->
-                    <button class="btn btn-success" type="button"><a href="./add_new_book.html"><h6>Add New Book</h6></a></button>
+
+        <div class="jumbotron">
+            <div class="wellcome">
+                <div class="row">
+                    <div class="col-10">
+                        <h2 type="text" class="txt-success">Books in ourCollection</h2>
+                    </div>
+                    <div class="col-2">
+                        <!-- <input class="btn btn-success" type="submit" value="Add New Book"> -->
+                        <button class="btn btn-success" type="button"><a href="add_new_book.html">
+                                <h6>Add New Book</h6>
+                            </a></button>
+                    </div>
                 </div>
             </div>
+            <hr>
+
+            <!-- text content -->
+            <div class='container-fluid'>
+
+                <!-- <table class="table table-striped"> -->
+                <table class="table table-dark table-hover" id="table">
+
+                    <thead>
+                        <tr>
+
+                            <th>#</th>
+                            <th>ISBN</th>
+                            <th>Book Title</th>
+                            <th>Over due fee</th>
+                            <th>Publisher</th>
+                            <th>Date Published</th>
+
+                        </tr>
+
+
+                    </thead>
+                    <tbody id="data">
+
+                    </tbody>
+
+
+
+                </table>
+
+
+            </div>
         </div>
-        <hr>
-        <!-- text content -->
-        <div class="contentpage">
+    </div>
 
-            <!-- <table class="table table-striped"> -->
-            <table class="table table-dark table-hover" id="table">
-
-                <thead>
-                    <tr>
-
-                        <th>#</th>
-                        <th>ISBN</th>
-                        <th>Book Title</th>
-                        <th>Over due fee</th>
-                        <th>Publisher</th>
-                        <th>Date Published</th>
-
-                    </tr>
-
-
-                </thead>
-                <tbody id="data">
-
-                </tbody>
-
-
-
-            </table>
-
-
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Company Name</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                        in justo.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                            class="icon ion-social-twitter"></i></a><a href="#"><i
+                            class="icon ion-social-snapchat"></i></a><a href="#"><i
+                            class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">Company Name © 2017</p>
         </div>
-        </div>
+    </footer>
 
 </body>
 

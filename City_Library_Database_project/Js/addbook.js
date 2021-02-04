@@ -1,28 +1,27 @@
 
-const wrapper = document.getElementById('form');
-wrapper.addEventListener('submit', (e) => {
-    let message = [];
+// const wrapper = document.getElementById('form');
+// wrapper.addEventListener('submit', (e) => {
+//     let message = [];
+//     let isbn = document.getElementById('isbn').value;
+//     let title = document.getElementById('title').value;
+//     let overdueFee = document.getElementById('fee').value;
+//     let publisher = document.getElementById('publisher').value;
+//     let date = document.getElementById("date").value;
+//     if (isbn == '' || title == '' || date == '' || overdueFee == '' || publisher == '' || date == '') {
+//         message.push('requered filled are missing');}
+// if (message.length > 0) {
+//     e.preventDefault();
+
+// }
+function addbooks() {
+
+    const url = 'https://elibraryrestapi.herokuapp.com/elibrary/api/book/add';
+
     let isbn = document.getElementById('isbn').value;
     let title = document.getElementById('title').value;
     let overdueFee = document.getElementById('fee').value;
     let publisher = document.getElementById('publisher').value;
     let date = document.getElementById("date").value;
-    if (isbn == '' || title == '' || date == '' || overdueFee == '' || publisher == '' || date == '') {
-        message.push('requered filled are missing');
-    }
-    // if (message.length > 0) {
-    //     e.preventDefault();
-
-    // }
-
-
-    const url = 'https://elibraryrestapi.herokuapp.com/elibrary/api/book/add';
-    // let isbn = document.getElementById('isbn').value;
-    // let title = document.getElementById('title').value;
-    // let overdueFee = document.getElementById('fee').value;
-    // let publisher = document.getElementById('publisher').value;
-    // let date = document.getElementById("date").value;
-    // post body data 
     const data = {
         "isbn": `${isbn}`,
         "title": `${title}`,
@@ -42,4 +41,4 @@ wrapper.addEventListener('submit', (e) => {
         .then(res => res.json())
         .then(res => console.log(res));
 
-});
+}

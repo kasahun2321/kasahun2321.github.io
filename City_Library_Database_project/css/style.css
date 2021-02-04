@@ -20,3 +20,6 @@ h1,h6{
     background-color: rgb(26, 211, 180);
     color: white;
   }
+  table {
+    max-width: 100%;
+}
