@@ -42,7 +42,7 @@ async function editBookForm(bookid) {
 
         <div class="btn-toolbar button" role="toolbar" aria-label="Toolbar with button groups">
 
-            <div class="btn-group mr-2 button" role="group" aria-label="Second group">
+            <div  aria-label="Second group">
             <button type="reset" class="btn btn btn-danger">Reset</button>
                 <button type="submit" class="btn btn btn-success">Save book</button>
             </div>
@@ -89,6 +89,8 @@ async function updatebookform(bookid) {
                 "datePublished": `${datePublished}`
             })
         })
+            .then(function (result)
+        {console.log(result)})
 
 
         $('#succesalert').fadeIn(500)
@@ -105,9 +107,12 @@ async function updatebookform(bookid) {
         alert(error)
 
     }
-    setTimeout(_ => {
-        location.reload('book.html')
-    })
+
+    function books() {
+        setTimeout(_ => {
+            location.reload('book.html')
+        })
+    }
 
 
 }
